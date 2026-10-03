@@ -1,0 +1,3509 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ksheera Siri | Pure Karnataka Cow Milk & Farm Dairy</title>
+  <meta name="description" content="Pure, chilled cow milk, curd (mosaru), artisanal bilona ghee and paneer from Karnataka's local farmers. Delivered fresh daily by 5:30 AM across Bengaluru, Mysuru, Mangaluru, Hubballi & Belagavi.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>🥛</text></svg>">
+
+  <!-- Google Fonts: Modern Latin & Authentic Kannada -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+/* ==========================================================================
+   KSHEERA SIRI (ಕ್ಷೀರ ಸಿರಿ) — PREMIUM KARNATAKA DAIRY BRAND DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Karnataka Dairy Color Tokens */
+  --green-primary: #1E5631;
+  --green-dark: #123B20;
+  --green-deep: #0D2816;
+  --green-medium: #2D6A4F;
+  --green-mint: #D8F3DC;
+  
+  --cream-bg: #FDFBF7;
+  --cream-surface: #F8F5EE;
+  --white: #FFFFFF;
+  
+  --gold-karnataka: #E68A00;
+  --gold-warm: #F59E0B;
+  --gold-light: #FEF3C7;
+  
+  --navy-deccan: #0B2545;
+  --navy-slate: #1E293B;
+  --navy-muted: #64748B;
+  
+  --blue-cold: #E0F2FE;
+  --blue-accent: #0284C7;
+  --blue-badge: #0369A1;
+
+  --border-light: rgba(11, 37, 69, 0.08);
+  --border-card: rgba(11, 37, 69, 0.12);
+
+  /* Typography Scale */
+  --font-en-head: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-en-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-kn-head: 'Baloo Tamma 2', 'Outfit', cursive;
+  --font-kn-body: 'Noto Sans Kannada', 'Plus Jakarta Sans', sans-serif;
+
+  /* Elevations */
+  --shadow-subtle: 0 2px 8px rgba(11, 37, 69, 0.04);
+  --shadow-card: 0 8px 24px rgba(11, 37, 69, 0.06);
+  --shadow-float: 0 16px 40px rgba(11, 37, 69, 0.12);
+  --shadow-green: 0 8px 25px rgba(30, 86, 49, 0.25);
+
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-smooth: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   RESET & FOUNDATIONS
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-en-body);
+  background-color: var(--cream-bg);
+  color: var(--navy-deccan);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Dynamic Kannada Font Mode */
+html[data-lang="kn"] body {
+  font-family: var(--font-kn-body);
+}
+
+html[data-lang="kn"] h1,
+html[data-lang="kn"] h2,
+html[data-lang="kn"] h3,
+html[data-lang="kn"] h4,
+html[data-lang="kn"] .brand-title-main,
+html[data-lang="kn"] .section-title,
+html[data-lang="kn"] .hero-heading {
+  font-family: var(--font-kn-head);
+  line-height: 1.35;
+}
+
+.container {
+  width: 92%;
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+/* Helpers */
+.text-center { text-align: center; }
+.text-white { color: var(--white) !important; }
+.text-gold { color: var(--gold-karnataka) !important; }
+.text-dim { color: #CBD5E1 !important; }
+.w-full { width: 100% !important; }
+
+/* Sub-kicker Eyebrow */
+.sub-kicker {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--green-primary);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.kicker-gold {
+  color: var(--gold-warm) !important;
+}
+
+.section-title {
+  font-family: var(--font-en-head);
+  font-size: clamp(1.85rem, 1.6rem + 1.2vw, 2.75rem);
+  font-weight: 700;
+  color: var(--navy-deccan);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.section-lead {
+  font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.15rem);
+  color: var(--navy-muted);
+  max-width: 640px;
+  margin: 0 auto 36px auto;
+}
+
+/* ==========================================================================
+   ANNOUNCEMENT BAR & REAL-TIME STATUS
+   ========================================================================== */
+
+.announcement-bar {
+  background-color: var(--green-deep);
+  color: #E2E8F0;
+  font-size: 0.85rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.announcement-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.announcement-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.live-dot {
+  width: 9px;
+  height: 9px;
+  background-color: #22C55E;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.3);
+  animation: liveRadar 2s infinite ease-in-out;
+}
+
+@keyframes liveRadar {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.live-pill {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86EFAC;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.announcement-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.announcement-btn {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  color: #F8FAFC;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.announcement-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: white;
+}
+
+.lang-pill {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.lang-pill:hover {
+  background: var(--gold-karnataka);
+  border-color: var(--gold-karnataka);
+  color: var(--navy-deccan);
+}
+
+/* ==========================================================================
+   MAIN STICKY HEADER & BRAND IDENTITY
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background: rgba(253, 251, 247, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 14px 0;
+  transition: var(--transition-smooth);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-emblem {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--green-primary), var(--green-dark));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(30, 86, 49, 0.2);
+}
+
+.emblem-icon { font-size: 1.5rem; }
+.emblem-leaf {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  font-size: 0.9rem;
+}
+
+.brand-title-main {
+  display: block;
+  font-family: var(--font-en-head);
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.6px;
+  color: var(--green-primary);
+  line-height: 1;
+}
+
+.brand-title-sub {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold-karnataka);
+  letter-spacing: 0.8px;
+  margin-top: 3px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  color: var(--navy-deccan);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--green-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--gold-karnataka);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.header-action-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-trigger-btn {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+}
+
+.cart-trigger-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--green-primary);
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--gold-karnataka);
+  color: var(--navy-deccan);
+  font-size: 0.75rem;
+  font-weight: 800;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--white);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-primary {
+  background-color: var(--green-primary);
+  color: var(--white);
+  box-shadow: 0 4px 14px rgba(30, 86, 49, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--green-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-green);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--navy-deccan);
+  border: 1px solid var(--border-card);
+}
+
+.btn-secondary:hover {
+  background: #F1F5F9;
+  border-color: var(--navy-deccan);
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  color: var(--navy-deccan);
+  border: 1px solid rgba(11, 37, 69, 0.15);
+}
+
+.btn-glass:hover {
+  background: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp-pill {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #86EFAC;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-smooth);
+}
+
+.btn-whatsapp-pill:hover {
+  background: #22C55E;
+  color: var(--white);
+}
+
+.btn-whatsapp-large {
+  background-color: #25D366;
+  color: var(--white);
+  font-weight: 700;
+  padding: 14px 24px;
+  font-size: 1.05rem;
+}
+
+.btn-whatsapp-large:hover {
+  background-color: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+}
+
+.btn-hero {
+  padding: 14px 30px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 0.82rem;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background-color: var(--navy-deccan);
+  border-radius: 2px;
+  transition: var(--transition-smooth);
+}
+
+.mobile-nav-panel {
+  display: none;
+}
+
+/* ==========================================================================
+   HERO SECTION & KARNATAKA DAIRY ART
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  padding: 64px 0 88px 0;
+  background: radial-gradient(circle at 80% 20%, rgba(224, 242, 254, 0.5) 0%, rgba(253, 251, 247, 1) 70%);
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-kicker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #E8F5E9;
+  color: var(--green-primary);
+  border: 1px solid #C8E6C9;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-heading {
+  font-family: var(--font-en-head);
+  font-size: clamp(2.4rem, 2rem + 1.8vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--navy-deccan);
+  margin-bottom: 20px;
+}
+
+.hero-subtext {
+  font-size: clamp(1rem, 0.95rem + 0.35vw, 1.18rem);
+  color: var(--navy-muted);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 580px;
+}
+
+.hero-btn-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(11, 37, 69, 0.1);
+}
+
+.trust-stat .stat-highlight {
+  display: block;
+  font-family: var(--font-en-head);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--green-primary);
+  line-height: 1;
+}
+
+.trust-stat .stat-caption {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy-muted);
+}
+
+.stat-sep {
+  width: 1px;
+  height: 36px;
+  background: rgba(11, 37, 69, 0.12);
+}
+
+/* Hero Visual Artboard */
+.hero-visual-col {
+  position: relative;
+}
+
+.farm-hero-card {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-float);
+  border: 1px solid var(--border-light);
+}
+
+.card-inner-scene {
+  background: linear-gradient(145deg, #123B20 0%, #1E5631 55%, #2D6A4F 100%);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  min-height: 420px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.scene-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scene-origin-pill {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  color: #FEF3C7;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.temp-badge {
+  background: rgba(2, 132, 199, 0.3);
+  border: 1px solid rgba(224, 242, 254, 0.4);
+  color: #E0F2FE;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+/* Milk Tumbler & Glass Bottle CSS Illustration */
+.milk-tumbler-canvas {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 36px;
+  margin: 30px 0 20px 0;
+  position: relative;
+}
+
+/* Pure Milk Bottle */
+.glass-bottle-silhouette {
+  width: 90px;
+  height: 200px;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px 20px 10px 10px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.bottle-cap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 14px;
+  background: var(--gold-karnataka);
+  border-radius: 4px 4px 0 0;
+  font-size: 0.45rem;
+  font-weight: 800;
+  color: var(--navy-deccan);
+  text-align: center;
+  line-height: 14px;
+}
+
+.bottle-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+}
+
+.milk-liquid-fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 90%;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F5F1E8 100%);
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.liquid-wave {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 200%;
+  height: 12px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0 C150,90 350,-40 500,40 C650,120 900,20 1200,40 L1200,120 L0,120 Z' fill='%23FFFFFF'%3E%3C/path%3E%3C/svg%3E") repeat-x;
+  background-size: 100px 12px;
+  animation: waveMotion 4s linear infinite;
+}
+
+@keyframes waveMotion {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.bottle-label {
+  position: absolute;
+  top: 25px;
+  left: 6px;
+  right: 6px;
+  background: rgba(30, 86, 49, 0.9);
+  padding: 6px 4px;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+}
+
+.label-brand {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #FCD34D;
+}
+
+.label-batch, .label-snf {
+  display: block;
+  font-size: 0.48rem;
+  opacity: 0.9;
+}
+
+/* Authentic Brass Tumbler (ಕರ್ನಾಟಕ ಬೆಳ್ಳಿಯ/ಹಿತ್ತಾಳೆ ಲೋಟ) */
+.brass-tumbler {
+  width: 74px;
+  height: 120px;
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 40%, #B45309 100%);
+  border-radius: 4px 4px 16px 16px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tumbler-froth {
+  position: absolute;
+  top: -8px;
+  width: 82px;
+  height: 18px;
+  background: #FFFDF8;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid #FEF3C7;
+}
+
+.brass-emboss {
+  color: rgba(254, 243, 199, 0.85);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.steam-vapour {
+  position: absolute;
+  top: -24px;
+  width: 30px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  animation: steamRise 3s infinite ease-out;
+}
+
+@keyframes steamRise {
+  0% { transform: translateY(0) scale(0.8); opacity: 0.6; }
+  50% { transform: translateY(-12px) scale(1.1); opacity: 0.3; }
+  100% { transform: translateY(-24px) scale(1.4); opacity: 0; }
+}
+
+/* Floating Micro-Badges */
+.floating-pill {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border-light);
+  position: absolute;
+  z-index: 10;
+}
+
+.floating-pill .icon {
+  font-size: 1.3rem;
+}
+
+.floating-pill strong {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--navy-deccan);
+}
+
+.floating-pill small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--green-primary);
+  font-weight: 600;
+}
+
+.pill-top {
+  top: 60px;
+  right: -16px;
+  animation: floatSoft 4s ease-in-out infinite;
+}
+
+.pill-bottom {
+  bottom: 24px;
+  left: -16px;
+  animation: floatSoft 4s ease-in-out 2s infinite;
+}
+
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ==========================================================================
+   METRICS BANNER
+   ========================================================================== */
+
+.metrics-ticker {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+  padding: 24px 0;
+}
+
+.ticker-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+
+.ticker-box {
+  padding: 8px 12px;
+}
+
+.metric-num {
+  display: block;
+  font-family: var(--font-en-head);
+  font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2.3rem);
+  font-weight: 800;
+  color: var(--green-primary);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.metric-lbl {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy-muted);
+}
+
+/* ==========================================================================
+   PRODUCT SHOWCASE SECTION
+   ========================================================================== */
+
+.products-section {
+  padding: 96px 0;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+
+.filter-tab {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--navy-deccan);
+  cursor: pointer;
+  box-shadow: var(--shadow-subtle);
+  transition: var(--transition-smooth);
+}
+
+.filter-tab:hover {
+  border-color: var(--green-primary);
+  color: var(--green-primary);
+}
+
+.filter-tab.active {
+  background: var(--green-primary);
+  color: var(--white);
+  border-color: var(--green-primary);
+  box-shadow: 0 4px 12px rgba(30, 86, 49, 0.25);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 30px;
+}
+
+.product-item-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-card);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.product-item-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-float);
+  border-color: rgba(30, 86, 49, 0.2);
+}
+
+.product-media {
+  height: 180px;
+  background: linear-gradient(135deg, #F8F5EE 0%, #EEF2F6 100%);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-badge-flag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #E8F5E9;
+  color: var(--green-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid #C8E6C9;
+}
+
+.product-title {
+  font-family: var(--font-en-head);
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: var(--navy-deccan);
+  margin-bottom: 4px;
+}
+
+.product-kannada-sub {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold-karnataka);
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 0.85rem;
+  color: var(--navy-muted);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.product-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-light);
+}
+
+.product-price-box .price-currency {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--navy-deccan);
+}
+
+.product-price-box .pack-size {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--navy-muted);
+}
+
+/* ==========================================================================
+   FARM TO HOME JOURNEY SECTION
+   ========================================================================== */
+
+.journey-section {
+  background: linear-gradient(180deg, var(--green-dark) 0%, var(--green-deep) 100%);
+  padding: 96px 0;
+  color: var(--white);
+}
+
+.journey-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.timeline-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  backdrop-filter: blur(8px);
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.timeline-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-6px);
+  border-color: rgba(252, 211, 77, 0.5);
+}
+
+.step-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #86EFAC;
+  margin-bottom: 6px;
+}
+
+.step-clock {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--gold-warm);
+  margin-bottom: 12px;
+}
+
+.step-emoji {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.step-title {
+  font-family: var(--font-en-head);
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: #D1D5DB;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.step-meta {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FDE68A;
+}
+
+/* ==========================================================================
+   PURITY SCANNER SIMULATOR
+   ========================================================================== */
+
+.scanner-section {
+  padding: 80px 0;
+  background-color: var(--cream-surface);
+}
+
+.scanner-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 44px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-card);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.scanner-form-wrap {
+  margin-top: 30px;
+}
+
+.quick-batch-pills {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy-muted);
+}
+
+.sample-code-chip {
+  background: #EEF2F6;
+  border: 1px solid var(--border-light);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.sample-code-chip:hover {
+  background: var(--green-primary);
+  color: white;
+}
+
+.scanner-input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.scanner-input-group input {
+  flex-grow: 1;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  border: 2px solid var(--border-card);
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.scanner-input-group input:focus {
+  border-color: var(--green-primary);
+}
+
+.scan-result-card {
+  background: #F8FAFC;
+  border-radius: var(--radius-md);
+  border: 1px solid #E2E8F0;
+  padding: 24px;
+  margin-top: 20px;
+}
+
+.scan-result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.scan-metric-box {
+  background: var(--white);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.scan-metric-box strong {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--green-primary);
+}
+
+.scan-metric-box small {
+  font-size: 0.75rem;
+  color: var(--navy-muted);
+}
+
+/* ==========================================================================
+   ABOUT US & FARMER EMPOWERMENT
+   ========================================================================== */
+
+.farmers-section {
+  padding: 96px 0;
+}
+
+.farmers-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.farmer-portrait-wrapper {
+  background: linear-gradient(135deg, #1E5631 0%, #2D6A4F 100%);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  position: relative;
+  box-shadow: var(--shadow-float);
+  color: white;
+}
+
+.farmer-badge-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FCD34D;
+  margin-bottom: 24px;
+}
+
+.farmer-avatar-canvas {
+  text-align: center;
+}
+
+.farmer-silhouette {
+  font-size: 5.5rem;
+  margin-bottom: 20px;
+}
+
+.farmer-quote-bubble {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  text-align: left;
+}
+
+.farmer-quote-bubble p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.farmer-quote-bubble cite {
+  font-size: 0.85rem;
+  color: #FDE68A;
+  font-style: normal;
+}
+
+.body-p {
+  font-size: 1.05rem;
+  color: var(--navy-muted);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.farmer-perks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.perk-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.perk-icon {
+  font-size: 1.6rem;
+  background: #E8F5E9;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.perk-item strong {
+  font-size: 1rem;
+  color: var(--navy-deccan);
+}
+
+.perk-item p {
+  font-size: 0.85rem;
+  color: var(--navy-muted);
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   STORE LOCATOR
+   ========================================================================== */
+
+.stores-section {
+  padding: 96px 0;
+  background-color: var(--cream-surface);
+}
+
+.city-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.city-btn {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--navy-deccan);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.city-btn.active {
+  background: var(--navy-deccan);
+  color: var(--white);
+  border-color: var(--navy-deccan);
+}
+
+.store-search-bar {
+  max-width: 520px;
+  margin: 0 auto 36px auto;
+  display: flex;
+  gap: 8px;
+}
+
+.store-search-bar input {
+  flex-grow: 1;
+  padding: 12px 18px;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.store-search-bar input:focus {
+  border-color: var(--green-primary);
+}
+
+.stores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.store-item-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  padding: 24px;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-smooth);
+}
+
+.store-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.store-title {
+  font-family: var(--font-en-head);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--navy-deccan);
+  margin-bottom: 6px;
+}
+
+.store-locality-tag {
+  color: var(--green-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.store-full-addr {
+  font-size: 0.85rem;
+  color: var(--navy-muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.store-footer-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+}
+
+.store-stock-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #15803D;
+  background: #DCFCE7;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.store-map-link {
+  font-size: 0.82rem;
+  color: var(--blue-accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.store-map-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   TESTIMONIALS SECTION
+   ========================================================================== */
+
+.testimonials-section {
+  padding: 96px 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.review-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  padding: 32px 24px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-stars {
+  color: var(--gold-karnataka);
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.review-quote {
+  font-size: 0.95rem;
+  color: var(--navy-slate);
+  line-height: 1.65;
+  font-style: italic;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  background: #FEF3C7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.author-details strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--navy-deccan);
+}
+
+.author-details span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--navy-muted);
+}
+
+/* ==========================================================================
+   7-DAY TRIAL CALCULATOR & SUBSCRIPTION CTA
+   ========================================================================== */
+
+.trial-calculator-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #143D22 0%, #1E5631 100%);
+  color: white;
+}
+
+.calculator-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  backdrop-filter: blur(12px);
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.calc-title {
+  font-family: var(--font-en-head);
+  font-size: clamp(1.8rem, 1.5rem + 1vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.calc-desc {
+  font-size: 1rem;
+  color: #D1D5DB;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.calc-checklist {
+  list-style: none;
+}
+
+.calc-checklist li {
+  font-size: 0.95rem;
+  color: #FEF3C7;
+  margin-bottom: 10px;
+}
+
+.calc-box {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  color: var(--navy-deccan);
+  box-shadow: var(--shadow-float);
+}
+
+.calc-box-title {
+  font-family: var(--font-en-head);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.calc-select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  background-color: #F8FAFC;
+}
+
+.calc-summary-row {
+  background: #F1F5F9;
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calc-sum-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy-muted);
+}
+
+.calc-sum-price {
+  font-family: var(--font-en-head);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--green-primary);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.calc-discount-badge {
+  font-size: 0.72rem;
+  background: #FEF3C7;
+  color: #B45309;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-pill);
+}
+
+/* ==========================================================================
+   CONTACT SECTION
+   ========================================================================== */
+
+.contact-section {
+  padding: 80px 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.contact-card {
+  background: var(--cream-bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 28px 20px;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--green-primary);
+}
+
+.contact-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+.contact-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy-deccan);
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green-primary);
+  margin-bottom: 6px;
+}
+
+.contact-card small {
+  font-size: 0.75rem;
+  color: var(--navy-muted);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.site-footer {
+  background: #091E13;
+  color: #94A3B8;
+  padding: 80px 0 32px 0;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-bio {
+  margin: 18px 0;
+  line-height: 1.7;
+}
+
+.footer-cert-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fssai-pill, .agmark-pill, .karnataka-flag-pill {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  color: #CBD5E1;
+}
+
+.footer-links-col h4 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.footer-links-col ul {
+  list-style: none;
+}
+
+.footer-links-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links-col a {
+  color: #94A3B8;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links-col a:hover {
+  color: var(--gold-karnataka);
+}
+
+.footer-legal {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   SLIDE-OVER CART DRAWER & PINCODE MODAL
+   ========================================================================== */
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background: var(--white);
+  z-index: 1200;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cart-drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--navy-muted);
+}
+
+.drawer-body {
+  padding: 24px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.empty-cart-state {
+  text-align: center;
+  padding: 40px 10px;
+}
+
+.empty-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cart-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.cart-item-info strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--navy-deccan);
+}
+
+.cart-item-info small {
+  color: var(--navy-muted);
+  font-size: 0.8rem;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-btn {
+  background: #F1F5F9;
+  border: 1px solid var(--border-light);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.drawer-footer {
+  padding: 24px;
+  background: var(--cream-bg);
+  border-top: 1px solid var(--border-light);
+}
+
+.drawer-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.cart-drop-note {
+  font-size: 0.78rem;
+  color: var(--green-primary);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 37, 69, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.drawer-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Pincode Modal */
+.pincode-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 37, 69, 0.5);
+  backdrop-filter: blur(6px);
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+}
+
+.pincode-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-float);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--navy-muted);
+}
+
+.modal-icon { font-size: 3rem; margin-bottom: 10px; }
+
+.modal-card h3 {
+  font-family: var(--font-en-head);
+  font-size: 1.35rem;
+  color: var(--navy-deccan);
+  margin-bottom: 8px;
+}
+
+.modal-card p {
+  font-size: 0.9rem;
+  color: var(--navy-muted);
+  margin-bottom: 20px;
+}
+
+.modal-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.modal-input-row input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 2px solid var(--border-card);
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+  text-align: center;
+}
+
+.pincode-feedback {
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-height: 24px;
+}
+
+.pincode-success { color: #15803D; }
+.pincode-error { color: #DC2626; }
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE FIRST ADAPTATION)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .journey-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .farmers-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .calc-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav, .header-action-group .btn-whatsapp-pill, .header-action-group .btn-primary {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: flex;
+  }
+  .mobile-nav-panel.open {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--white);
+    padding: 20px;
+    border-top: 1px solid var(--border-light);
+  }
+  .mobile-nav-link {
+    color: var(--navy-deccan);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 0;
+  }
+  .ticker-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .journey-timeline {
+    grid-template-columns: 1fr;
+  }
+  .scan-result-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Accessibility & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Top Real-Time Notification Bar -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <div class="announcement-left">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span class="live-pill" data-en="LIVE 4°C COLD CHAIN" data-kn="ಲೈವ್ ೪°C ಶೀತಲೀಕರಣ">LIVE 4°C COLD CHAIN</span>
+        <p id="announcement-text" 
+           data-en="Today's fresh morning batch dispatched at 4:45 AM from Mandya & Hassan | Next drop: Tomorrow 5:30 AM" 
+           data-kn="ಇಂದು ಮುಂಜಾನೆ 4:45ರ ತಾಜಾ ಹಾಲು ಮಂಡ್ಯ ಮತ್ತು ಹಾಸನದಿಂದ ಹೊರಟಿದೆ | ಮುಂದಿನ ಡೆಲಿವರಿ: ನಾಳೆ ಮುಂಜಾನೆ 5:30">
+          Today's fresh morning batch dispatched at 4:45 AM from Mandya & Hassan | Next drop: Tomorrow 5:30 AM
+        </p>
+      </div>
+      <div class="announcement-right">
+        <button id="pincode-trigger-btn" class="announcement-btn" data-en="📍 Check Pincode" data-kn="📍 ಪಿನ್‌ಕೋಡ್ ಪರಿಶೀಲಿಸಿ">📍 Check Pincode</button>
+        <div class="lang-switch-wrap">
+          <button id="lang-btn" class="lang-pill" aria-label="Switch Language to Kannada or English">
+            <span class="lang-text" id="lang-indicator">English / ಕನ್ನಡ</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-identity">
+        <div class="brand-emblem">
+          <span class="emblem-icon">🥛</span>
+          <span class="emblem-leaf">🌿</span>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-title-main">KSHEERA SIRI</span>
+          <span class="brand-title-sub">ಕ್ಷೀರ ಸಿರಿ • KARNATAKA PURE</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="#products" class="nav-link" data-en="Products" data-kn="ಉತ್ಪನ್ನಗಳು">Products</a>
+        <a href="#journey" class="nav-link" data-en="Farm to Home" data-kn="ಫಾರ್ಮ್‌ನಿಂದ ಮನೆಗೆ">Farm to Home</a>
+        <a href="#farmers" class="nav-link" data-en="Farmer Impact" data-kn="ನಮ್ಮ ರೈತರು">Farmer Impact</a>
+        <a href="#scanner" class="nav-link" data-en="Purity Scanner" data-kn="ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆ">Purity Scanner</a>
+        <a href="#stores" class="nav-link" data-en="Store Locator" data-kn="ಮಳಿಗೆಗಳು">Store Locator</a>
+      </nav>
+
+      <div class="header-action-group">
+        <button id="cart-btn" class="cart-trigger-btn" aria-label="View Cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count" id="cart-counter">0</span>
+        </button>
+        <a href="https://wa.me/919880474744?text=Namaskara%20Ksheera%20Siri%20Team!%20I%20want%20to%20order%20fresh%20milk" target="_blank" class="btn btn-whatsapp-pill">
+          <span class="wa-icon">💬</span>
+          <span data-en="Order on WhatsApp" data-kn="ವಾಟ್ಸಪ್ ಆರ್ಡರ್">Order on WhatsApp</span>
+        </a>
+        <button id="subscribe-cta-btn" class="btn btn-primary" data-en="7-Day Milk Trial" data-kn="೭ ದಿನಗಳ ಟ್ರಯಲ್">7-Day Milk Trial</button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel">
+      <a href="#products" class="mobile-nav-link" data-en="Products" data-kn="ಉತ್ಪನ್ನಗಳು">Products</a>
+      <a href="#journey" class="mobile-nav-link" data-en="Farm to Home" data-kn="ಫಾರ್ಮ್‌ನಿಂದ ಮನೆಗೆ">Farm to Home</a>
+      <a href="#farmers" class="mobile-nav-link" data-en="Farmer Impact" data-kn="ನಮ್ಮ ರೈತರು">Farmer Impact</a>
+      <a href="#scanner" class="mobile-nav-link" data-en="Purity Scanner" data-kn="ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆ">Purity Scanner</a>
+      <a href="#stores" class="mobile-nav-link" data-en="Store Locator" data-kn="ಮಳಿಗೆಗಳು">Store Locator</a>
+      <div class="mobile-nav-actions">
+        <button class="btn btn-primary w-full" id="mobile-trial-btn" data-en="Book 7-Day Morning Trial" data-kn="೭ ದಿನಗಳ ಟ್ರಯಲ್ ಬುಕ್ ಮಾಡಿ">Book 7-Day Morning Trial</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Karnataka Dairy Farm Theme -->
+  <section class="hero-section">
+    <div class="hero-backdrop-pattern"></div>
+    <div class="container hero-grid">
+      <div class="hero-text-col">
+        <div class="hero-kicker-badge">
+          <span class="kicker-leaf">🌿</span>
+          <span data-en="100% Antibiotic-Free Single-Origin Cow Milk" data-kn="೧೦೦% ನೈಸರ್ಗಿಕ, ಆಂಟಿಬಯೋಟಿಕ್-ಮುಕ್ತ ಹಸು ಹಾಲು">100% Antibiotic-Free Single-Origin Cow Milk</span>
+        </div>
+        
+        <h1 class="hero-heading" data-en="Pure Milk from Karnataka’s Soil to Your Family’s Morning Cup." data-kn="ಕರ್ನಾಟಕದ ಹಸಿರು ಮಣ್ಣಿನಿಂದ ನಿಮ್ಮ ಕುಟುಂಬದ ಬೆಳಗಿನ ಕಪ್‌ಗೆ.">
+          Pure Milk from Karnataka’s Soil to Your Family’s Morning Cup.
+        </h1>
+
+        <p class="hero-subtext" data-en="Ethically procured from 12,000+ local smallholder farmers in Mandya, Hassan & Malnad. Instantly chilled to 4°C at village collection centres, rigorously tested for 24 purity parameters, and delivered silently before 5:30 AM." data-kn="ಮಂಡ್ಯ, ಹಾಸನ ಮತ್ತು ಮಲೆನಾಡಿನ ೧೨,೦೦೦ಕ್ಕೂ ಹೆಚ್ಚು ಸ್ಥಳೀಯ ರೈತರಿಂದ ನೇರ ಸಂಗ್ರಹ. ಕರೆದ ೪೫ ನಿಮಿಷಗಳಲ್ಲಿ ೪°C ಗೆ ಶೀತಲೀಕರಿಸಿ, ೨೪ ಲ್ಯಾಬ್ ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆಗಳ ನಂತರ ಮುಂಜಾನೆ ೫:೩೦ ರೊಳಗಾಗಿ ನಿಮ್ಮ ಮನೆಬಾಗಿಲಿಗೆ.">
+          Ethically procured from 12,000+ local smallholder farmers in Mandya, Hassan & Malnad. Instantly chilled to 4°C at village collection centres, rigorously tested for 24 purity parameters, and delivered silently before 5:30 AM.
+        </p>
+
+        <div class="hero-btn-row">
+          <button class="btn btn-primary btn-hero" id="hero-order-btn" data-en="Start 7-Day Fresh Trial (₹199)" data-kn="೭ ದಿನಗಳ ಟ್ರಯಲ್ ಪ್ರಾರಂಭಿಸಿ (₹೧೯೯)">
+            Start 7-Day Fresh Trial (₹199)
+          </button>
+          <a href="#journey" class="btn btn-glass btn-hero" data-en="Explore Farm Journey ↓" data-kn="ಹಾಲು ಸಂಗ್ರಹದ ಪ್ರಯಾಣ ನೋಡಿ ↓">
+            Explore Farm Journey ↓
+          </a>
+        </div>
+
+        <div class="hero-trust-bar">
+          <div class="trust-stat">
+            <span class="stat-highlight">75%</span>
+            <span class="stat-caption" data-en="Fair Price to Farmers" data-kn="ರೈತರಿಗೆ ನೇರ ಆದಾಯ">Fair Price to Farmers</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="trust-stat">
+            <span class="stat-highlight">4°C</span>
+            <span class="stat-caption" data-en="Unbroken Cold Chain" data-kn="ಶೀತಲೀಕರಣ ಗ್ಯಾರಂಟಿ">Unbroken Cold Chain</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="trust-stat">
+            <span class="stat-highlight">0%</span>
+            <span class="stat-caption" data-en="Adulterants or Urea" data-kn="ಯಾವುದೇ ಕಲಬೆರಕೆ ಇಲ್ಲ">Adulterants or Urea</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Artboard -->
+      <div class="hero-visual-col">
+        <div class="farm-hero-card">
+          <div class="card-ambient-glow"></div>
+          <div class="card-inner-scene">
+            <div class="scene-header">
+              <span class="scene-origin-pill">🌾 Srirangapatna Dairy Cluster</span>
+              <span class="temp-badge">❄️ 3.8°C Storage</span>
+            </div>
+
+            <!-- Visual representation of authentic fresh Karnataka milk & brass tumbler -->
+            <div class="milk-tumbler-canvas">
+              <div class="glass-bottle-silhouette">
+                <div class="bottle-cap">KSHEERA SIRI</div>
+                <div class="bottle-neck"></div>
+                <div class="bottle-body">
+                  <div class="milk-liquid-fill">
+                    <div class="liquid-wave"></div>
+                  </div>
+                  <div class="bottle-label">
+                    <span class="label-brand">ಕ್ಷೀರ ಸಿರಿ</span>
+                    <span class="label-batch">Batch: B-0430-MND</span>
+                    <span class="label-snf">SNF: 8.8% | Fat: 3.9%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Karnataka brass Davara / Tumbler representation -->
+              <div class="brass-tumbler">
+                <div class="tumbler-froth"></div>
+                <div class="tumbler-body">
+                  <span class="brass-emboss">ಕನ್ನಡ ಕ್ಷೀರ</span>
+                </div>
+                <div class="steam-vapour"></div>
+              </div>
+            </div>
+
+            <!-- Floating Micro-Badges -->
+            <div class="floating-pill pill-top">
+              <span class="icon">✨</span>
+              <div>
+                <strong data-en="0 Preservatives" data-kn="ಯಾವುದೇ ಪ್ರಿಸರ್ವೇಟಿವ್ ಇಲ್ಲ">0 Preservatives</strong>
+                <small data-en="Only pure gentle pasteurisation" data-kn="ಕೇವಲ ನೈಸರ್ಗಿಕ ಪಾಶ್ಚರೀಕರಣ">Only pure gentle pasteurisation</small>
+              </div>
+            </div>
+
+            <div class="floating-pill pill-bottom">
+              <span class="icon">☕</span>
+              <div>
+                <strong data-en="Filter Kaapi Guarantee" data-kn="ಫಿಲ್ಟರ್ ಕಾಫಿಗೆ ಬೆಸ್ಟ್">Filter Kaapi Guarantee</strong>
+                <small data-en="Natural rich golden crema" data-kn="ನೈಸರ್ಗಿಕ ಕೆನೆ ಮತ್ತು ಪರಿಮಳ">Natural rich golden crema</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Metrics Banner -->
+  <section class="metrics-ticker">
+    <div class="container ticker-container">
+      <div class="ticker-box">
+        <span class="metric-num">12,450+</span>
+        <span class="metric-lbl" data-en="Karnataka Farmers Supported" data-kn="ಕರ್ನಾಟಕದ ರೈತ ಕುಟುಂಬಗಳು">Karnataka Farmers Supported</span>
+      </div>
+      <div class="ticker-box">
+        <span class="metric-num">48,000 L</span>
+        <span class="metric-lbl" data-en="Fresh Daily Procurement" data-kn="ದೈನಂದಿನ ಹಾಲು ಸಂಗ್ರಹ">Fresh Daily Procurement</span>
+      </div>
+      <div class="ticker-box">
+        <span class="metric-num">5 Cities</span>
+        <span class="metric-lbl" data-en="Bengaluru, Mysuru, Hubballi & more" data-kn="ಬೆಂಗಳೂರು, ಮೈಸೂರು, ಹುಬ್ಬಳ್ಳಿ...">Bengaluru, Mysuru, Hubballi & more</span>
+      </div>
+      <div class="ticker-box">
+        <span class="metric-num">24 Tests</span>
+        <span class="metric-lbl" data-en="Automated Lab Checks Daily" data-kn="ಪ್ರತಿದಿನ ೨೪ ಲ್ಯಾಬ್ ಪರೀಕ್ಷೆಗಳು">Automated Lab Checks Daily</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase Section (7 Core Products) -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-heading-wrap text-center">
+        <span class="sub-kicker" data-en="FARM FRESH DAIRY SELECTION" data-kn="ನಮ್ಮ ನೈಸರ್ಗಿಕ ಉತ್ಪನ್ನಗಳು">FARM FRESH DAIRY SELECTION</span>
+        <h2 class="section-title" data-en="Pure Karnataka Dairy for Every Meal" data-kn="ಕರ್ನಾಟಕದ ಪ್ರತಿಯೊಂದು ಕುಟುಂಬಕ್ಕೆ ಶುದ್ಧ ಹಾಲಿನ ಉತ್ಪನ್ನಗಳು">Pure Karnataka Dairy for Every Meal</h2>
+        <p class="section-lead" data-en="100% natural, untouched by hand, delivered cold every morning across Karnataka." data-kn="ಕೈ ಸೋಂಕದ, ಯಾವುದೇ ಕೃತಕ ಅಂಶಗಳಿಲ್ಲದ ಅಪ್ಪಟ ನೈಸರ್ಗಿಕ ಡೈರಿ ಉತ್ಪನ್ನಗಳು.">100% natural, untouched by hand, delivered cold every morning across Karnataka.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-bar" role="tablist">
+        <button class="filter-tab active" data-filter="all" data-en="All Products" data-kn="ಎಲ್ಲಾ ಉತ್ಪನ್ನಗಳು">All Products</button>
+        <button class="filter-tab" data-filter="milk" data-en="Milk" data-kn="ಹಾಲು">Milk</button>
+        <button class="filter-tab" data-filter="curd" data-en="Curd (Mosaru)" data-kn="ಮೊಸರು">Curd (Mosaru)</button>
+        <button class="filter-tab" data-filter="ghee" data-en="Ghee & Butter" data-kn="ತುಪ್ಪ & ಬೆಣ್ಣೆ">Ghee & Butter</button>
+        <button class="filter-tab" data-filter="paneer" data-en="Paneer & Cheese" data-kn="ಪನೀರ್ & ಚೀಸ್">Paneer & Cheese</button>
+        <button class="filter-tab" data-filter="flavoured" data-en="Flavoured Milk" data-kn="ಸುವಾಸಿತ ಹಾಲು">Flavoured Milk</button>
+      </div>
+
+      <!-- Dynamic Product Grid -->
+      <div class="products-grid" id="products-catalog" aria-live="polite">
+        <!-- Rendered via JavaScript with full English & Kannada localization -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Farm to Home Journey Section -->
+  <section class="journey-section" id="journey">
+    <div class="container">
+      <div class="section-heading-wrap text-center text-inverted">
+        <span class="sub-kicker kicker-gold" data-en="FROM PASTURE TO PORCH" data-kn="ಹಳ್ಳಿ ಮಣ್ಣಿನಿಂದ ನಿಮ್ಮ ಮನೆಗೆ">FROM PASTURE TO PORCH</span>
+        <h2 class="section-title text-white" data-en="The 4-Stage Cold-Chain Freshness Journey" data-kn="೪ ಹಂತಗಳ ಕಟ್ಟುನಿಟ್ಟಾದ ಶುದ್ಧತೆಯ ಪ್ರಯಾಣ">The 4-Stage Cold-Chain Freshness Journey</h2>
+        <p class="section-lead text-dim" data-en="Trace how your morning milk travels safely from rural Karnataka farms to your doorstep in under 18 hours." data-kn="ಹಳ್ಳಿಯ ಫಾರ್ಮ್‌ನಿಂದ ನಿಮ್ಮ ಮನೆ ಬಾಗಿಲಿಗೆ ಕೇವಲ ಕೆಲವೇ ಗಂಟೆಗಳಲ್ಲಿ ಹಾಲು ತಲುಪುವ ವೈಜ್ಞಾನಿಕ ವಿಧಾನ.">Trace how your morning milk travels safely from rural Karnataka farms to your doorstep in under 18 hours.</p>
+      </div>
+
+      <div class="journey-timeline">
+        <!-- Step 1 -->
+        <div class="timeline-card">
+          <div class="step-badge">STAGE 01</div>
+          <div class="step-clock">⏰ 04:30 AM</div>
+          <div class="step-emoji">🐄</div>
+          <h3 class="step-title" data-en="Ethical Milking at Dawn" data-kn="೧. ಮುಂಜಾನೆಯ ನೈಸರ್ಗಿಕ ಕರೆಯುವಿಕೆ">Ethical Milking at Dawn</h3>
+          <p class="step-desc" data-en="Healthy cows graze freely on green pastureland in Mandya and Hassan. Strict zero-oxytocin and zero-hormone policy verified by field vets." data-kn="ಮಂಡ್ಯ ಹಾಗೂ ಮಲೆನಾಡಿನಲ್ಲಿ ನೈಸರ್ಗಿಕ ಮೇವು ತಿನ್ನುವ ಹಸುಗಳು. ಯಾವುದೇ ಹಾರ್ಮೋನ್ ಇಂಜೆಕ್ಷನ್ ಇರುವುದಿಲ್ಲ.">Healthy cows graze freely on green pastureland in Mandya and Hassan. Strict zero-oxytocin and zero-hormone policy verified by field vets.</p>
+          <span class="step-meta" data-en="✓ Sourced from 12,000+ local farmers" data-kn="✓ ೧೨,೦೦೦+ ರೈತರಿಂದ ಸಂಗ್ರಹ">✓ Sourced from 12,000+ local farmers</span>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-card">
+          <div class="step-badge">STAGE 02</div>
+          <div class="step-clock">⏰ 05:15 AM</div>
+          <div class="step-emoji">❄️</div>
+          <h3 class="step-title" data-en="Rapid Chilling under 4°C" data-kn="೨. ೪°C ತ್ವರಿತ ಶೀತಲೀಕರಣ">Rapid Chilling under 4°C</h3>
+          <p class="step-desc" data-en="Within 45 minutes of milking, raw milk is brought to village Bulk Milk Coolers (BMCs) to immediately halt any microbial multiplication." data-kn="ಹಾಲು ಕರೆದ ೪೫ ನಿಮಿಷಗಳಲ್ಲಿ ಹಳ್ಳಿಯ ಕೂಲರ್‌ಗಳಲ್ಲಿ ೪ ಡಿಗ್ರಿಗೆ ತಣ್ಣಗಾಗಿಸಿ ಬ್ಯಾಕ್ಟೀರಿಯಾ ಬೆಳೆಯದಂತೆ ತಡೆಯಲಾಗುತ್ತದೆ.">Within 45 minutes of milking, raw milk is brought to village Bulk Milk Coolers (BMCs) to immediately halt any microbial multiplication.</p>
+          <span class="step-meta" data-en="✓ Eliminates need for chemical preservatives" data-kn="✓ ಯಾವುದೇ ಪ್ರಿಸರ್ವೇಟಿವ್ ಅಗತ್ಯವಿಲ್ಲ">✓ Eliminates need for chemical preservatives</span>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-card">
+          <div class="step-badge">STAGE 03</div>
+          <div class="step-clock">⏰ 08:30 AM</div>
+          <div class="step-emoji">🔬</div>
+          <h3 class="step-title" data-en="24-Point Automated Lab Test" data-kn="೩. ೨೪ ಲ್ಯಾಬ್ ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆ">24-Point Automated Lab Test</h3>
+          <p class="step-desc" data-en="State-of-the-art infrared spectroscopy verifies zero water adulteration, zero starch, zero urea, and confirms optimum 3.8% natural fat and 8.7% SNF." data-kn="ಯಾವುದೇ ಕಲಬೆರಕೆ, ನೀರು ಅಥವಾ ರಾಸಾಯನಿಕ ಇಲ್ಲದಿರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಆಟೋಮೇಟೆಡ್ ಲ್ಯಾಬ್ ಪರೀಕ್ಷೆ.">State-of-the-art infrared spectroscopy verifies zero water adulteration, zero starch, zero urea, and confirms optimum 3.8% natural fat and 8.7% SNF.</p>
+          <span class="step-meta" data-en="✓ Certified FSSAI & Agmark Grade A" data-kn="✓ FSSAI ಹಾಗೂ ಆಗ್ಮಾರ್ಕ್ ಪ್ರಮಾಣೀಕೃತ">✓ Certified FSSAI & Agmark Grade A</span>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-card">
+          <div class="step-badge">STAGE 04</div>
+          <div class="step-clock">⏰ 05:30 AM</div>
+          <div class="step-emoji">🚪</div>
+          <h3 class="step-title" data-en="Silent Doorstep Drop" data-kn="೪. ಮುಂಜಾನೆಯ ಮನೆ ವಿತರಣೆ">Silent Doorstep Drop</h3>
+          <p class="step-desc" data-en="Insulated refrigerated delivery vans dispatch fresh milk packets and glass bottles to your door before sunrise, ready for fresh morning filter coffee." data-kn="ಬೆಳಗಿನ ಸೂರ್ಯೋದಯಕ್ಕಿಂತ ಮುಂಚಿತವಾಗಿ, ನಿಮ್ಮ ಮುಂಜಾನೆಯ ಕಾಫಿಗಾಗಿ ಶುದ್ಧ ಹಾಲು ಮನೆ ಬಾಗಿಲಿಗೆ ಸಿದ್ಧವಾಗಿರುತ್ತದೆ.">Insulated refrigerated delivery vans dispatch fresh milk packets and glass bottles to your door before sunrise, ready for fresh morning filter coffee.</p>
+          <span class="step-meta" data-en="✓ Delivered across 5 major Karnataka cities" data-kn="✓ ೫ ಪ್ರಮುಖ ನಗರಗಳಲ್ಲಿ ಲಭ್ಯ">✓ Delivered across 5 major Karnataka cities</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Batch Purity & Traceability Scanner Simulator -->
+  <section class="scanner-section" id="scanner">
+    <div class="container">
+      <div class="scanner-card">
+        <div class="scanner-header text-center">
+          <span class="sub-kicker" data-en="TRANSPARENT DAIRY" data-kn="ಪಾರದರ್ಶಕ ಗುಣಮಟ್ಟ">TRANSPARENT DAIRY</span>
+          <h2 class="section-title" data-en="Scan & Verify Your Milk Purity" data-kn="ನಿಮ್ಮ ಹಾಲಿನ ಪ್ಯಾಕೆಟ್ ಶುದ್ಧತೆಯನ್ನು ಪರೀಕ್ಷಿಸಿ">Scan & Verify Your Milk Purity</h2>
+          <p class="section-lead" data-en="Every Ksheera Siri packet comes stamped with a batch code. Test a sample batch code below to view real-time farm origin and lab test telemetry." data-kn="ಪ್ರತಿಯೊಂದು ಪ್ಯಾಕೆಟ್‌ನ ಕೋಡ್ ನಮೂದಿಸಿ, ಆ ಹಾಲು ಯಾವ ಹಳ್ಳಿಯ ಫಾರ್ಮ್‌ನಿಂದ ಬಂದಿದೆ ಮತ್ತು ಲ್ಯಾಬ್ ವರದಿ ಹೇಗಿದೆ ಎಂದು ಪರಿಶೀಲಿಸಿ.">Every Ksheera Siri packet comes stamped with a batch code. Test a sample batch code below to view real-time farm origin and lab test telemetry.</p>
+        </div>
+
+        <div class="scanner-form-wrap">
+          <div class="quick-batch-pills">
+            <span data-en="Click sample batch:" data-kn="ಮಾದರಿ ಕೋಡ್ ಕ್ಲಿಕ್ ಮಾಡಿ:">Click sample batch:</span>
+            <button class="sample-code-chip" data-code="MND-0430-A">MND-0430-A (Mandya)</button>
+            <button class="sample-code-chip" data-code="HSN-0515-B">HSN-0515-B (Hassan)</button>
+            <button class="sample-code-chip" data-code="MLN-0600-C">MLN-0600-C (Shimoga)</button>
+          </div>
+
+          <div class="scanner-input-group">
+            <input type="text" id="batch-code-input" placeholder="e.g. MND-0430-A" value="MND-0430-A" aria-label="Enter Milk Batch Code">
+            <button id="run-scan-btn" class="btn btn-primary" data-en="Verify Purity Certificate" data-kn="ಗುಣಮಟ್ಟ ಪರಿಶೀಲಿಸಿ">Verify Purity Certificate</button>
+          </div>
+
+          <!-- Dynamic Result Display -->
+          <div class="scan-result-card" id="scan-result-container">
+            <!-- Injected via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us & Karnataka Farmer Empowerment -->
+  <section class="farmers-section" id="farmers">
+    <div class="container">
+      <div class="farmers-grid">
+        <div class="farmer-visual-box">
+          <div class="farmer-portrait-wrapper">
+            <div class="farmer-badge-stamp">
+              <span class="stamp-icon">🌾</span>
+              <span class="stamp-text">KARNATAKA KISAN DIRECT</span>
+            </div>
+            <!-- Symbolic farmer representation with Karnataka towel/traditional attire aesthetic -->
+            <div class="farmer-avatar-canvas">
+              <div class="farmer-silhouette">🧑‍🌾</div>
+              <div class="farmer-quote-bubble">
+                <p data-en="“Because Ksheera Siri deposits payment directly every Tuesday with transparent fat measurement, my family bought solar milking machines and zero loans!”" 
+                   data-kn="“ಯಾವುದೇ ಮಧ್ಯವರ್ತಿಗಳಿಲ್ಲದೆ ನೇರವಾಗಿ ನಮ್ಮ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಬರುವುದರಿಂದ, ನಮ್ಮ ಸಂಸಾರ ಸಾಲ ಮುಕ್ತವಾಗಿದೆ!”">
+                  “Because Ksheera Siri deposits payment directly every Tuesday with transparent fat measurement, my family bought solar milking machines and zero loans!”
+                </p>
+                <cite>— <strong>Smt. Gowramma & Sri Ningegowda</strong>, Srirangapatna, Mandya</cite>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="farmer-content-box">
+          <span class="sub-kicker" data-en="ROOTS OF KARNATAKA" data-kn="ಕರ್ನಾಟಕದ ಅನ್ನದಾತರು">ROOTS OF KARNATAKA</span>
+          <h2 class="section-title" data-en="Empowering 12,000+ Dairy Families Across 8 Districts" data-kn="೮ ಜಿಲ್ಲೆಗಳ ೧೨,೦೦೦ಕ್ಕೂ ಹೆಚ್ಚು ರೈತ ಕುಟುಂಬಗಳ ಸಬಲೀಕರಣ">Empowering 12,000+ Dairy Families Across 8 Districts</h2>
+          <p class="body-p" data-en="At Ksheera Siri, we believe that pure milk can only come from content cows and respected farmers. By eliminating unprincipled middlemen, we ensure that a staggering 75% of every rupee spent by Karnataka families goes straight to the dairy farmers' accounts." data-kn="ಕ್ಷೀರ ಸಿರಿಯಲ್ಲಿ ನಾವು ಮಧ್ಯವರ್ತಿಗಳ ಹಾವಳಿಯನ್ನು ಸಂಪೂರ್ಣವಾಗಿ ನಿವಾರಿಸಿದ್ದೇವೆ. ಗ್ರಾಹಕರು ನೀಡುವ ಪ್ರತಿ ರೂಪಾಯಿಯಲ್ಲಿ ೭೫% ನಷ್ಟು ಹಣ ನೇರವಾಗಿ ನಮ್ಮ ರೈತರ ಕೈ ಸೇರುತ್ತದೆ.">
+            At Ksheera Siri, we believe that pure milk can only come from content cows and respected farmers. By eliminating unprincipled middlemen, we ensure that a staggering 75% of every rupee spent by Karnataka families goes straight to the dairy farmers' accounts.
+          </p>
+
+          <div class="farmer-perks-list">
+            <div class="perk-item">
+              <span class="perk-icon">💰</span>
+              <div>
+                <strong data-en="Weekly Direct Bank Transfer" data-kn="ಪ್ರತಿ ವಾರ ನೇರ ಬ್ಯಾಂಕ್ ಜಮೆ">Weekly Direct Bank Transfer</strong>
+                <p data-en="Zero middlemen deductions. 100% digital passbook linked to milk fat testing." data-kn="ಯಾವುದೇ ಕಮಿಷನ್ ಕಡಿತವಿಲ್ಲ. ಪಾರದರ್ಶಕ ಡಿಜಿಟಲ್ ತಪಾಸಣೆ.">Zero middlemen deductions. 100% digital passbook linked to milk fat testing.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon">🩺</span>
+              <div>
+                <strong data-en="Free Veterinary Care & Insurance" data-kn="ಉಚಿತ ಪಶುವೈದ್ಯಕೀಯ ಸೇವೆ">Free Veterinary Care & Insurance</strong>
+                <p data-en="Dedicated veterinary ambulances, preventive vaccines, and subsidized green fodder." data-kn="ಹಸುಗಳ ಆರೋಗ್ಯ ತಪಾಸಣೆಗೆ ವೈದ್ಯರ ಉಚಿತ ಭೇಟಿ ಮತ್ತು ಮೇವಿನ ಸಹಾಯ.">Dedicated veterinary ambulances, preventive vaccines, and subsidized green fodder.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon">🎓</span>
+              <div>
+                <strong data-en="Rural Children Education Scholarship" data-kn="ರೈತ ಮಕ್ಕಳ ವಿದ್ಯಾಭ್ಯಾಸಕ್ಕೆ ವಿದ್ಯಾರ್ಥಿವೇತನ">Rural Children Education Scholarship</strong>
+                <p data-en="A dedicated ₹1 from every litre is deposited into an educational fund for farmers' children." data-kn="ಪ್ರತಿ ಲೀಟರ್ ಹಾಲಿನಿಂದ ೧ ರೂಪಾಯಿ ರೈತ ಮಕ್ಕಳ ವಿದ್ಯಾಭ್ಯಾಸದ ನಿಧಿಗೆ.">A dedicated ₹1 from every litre is deposited into an educational fund for farmers' children.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Locator Section -->
+  <section class="stores-section" id="stores">
+    <div class="container">
+      <div class="section-heading-wrap text-center">
+        <span class="sub-kicker" data-en="FIND US IN YOUR CITY" data-kn="ನಮ್ಮ ಮಳಿಗೆಗಳು">FIND US IN YOUR CITY</span>
+        <h2 class="section-title" data-en="Ksheera Siri Parlours & Retail Stores" data-kn="ನಿಮ್ಮ ಸಮೀಪದ ಕ್ಷೀರ ಸಿರಿ ಶಾಪ್ ಹುಡುಕಿ">Ksheera Siri Parlours & Retail Stores</h2>
+        <p class="section-lead" data-en="Visit our dedicated milk experience parlours for warm badam milk, fresh paneer cutting counters, and pure bilona ghee." data-kn="ಬೆಂಗಳೂರು, ಮೈಸೂರು, ಮಂಗಳೂರು, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು ಬೆಳಗಾವಿಯ ನಮ್ಮ ಮಳಿಗೆಗಳಿಗೆ ಭೇಟಿ ನೀಡಿ.">Visit our dedicated milk experience parlours for warm badam milk, fresh paneer cutting counters, and pure bilona ghee.</p>
+      </div>
+
+      <!-- City Navigation Pills -->
+      <div class="city-filter-bar">
+        <button class="city-btn active" data-city="bengaluru">Bengaluru (ಬೆಂಗಳೂರು • 42 Stores)</button>
+        <button class="city-btn" data-city="mysuru">Mysuru (ಮೈಸೂರು • 12 Stores)</button>
+        <button class="city-btn" data-city="mangaluru">Mangaluru (ಮಂಗಳೂರು • 8 Stores)</button>
+        <button class="city-btn" data-city="hubballi">Hubballi-Dharwad (ಹುಬ್ಬಳ್ಳಿ • 9 Stores)</button>
+        <button class="city-btn" data-city="belagavi">Belagavi (ಬೆಳಗಾವಿ • 6 Stores)</button>
+      </div>
+
+      <!-- Search Input for Area / Pincode -->
+      <div class="store-search-bar">
+        <input type="text" id="store-search-input" placeholder="Search locality in selected city (e.g. Jayanagar, Gokulam, Kadri...)" aria-label="Search Locality">
+        <button class="btn btn-secondary btn-sm" id="clear-store-search">Clear</button>
+      </div>
+
+      <!-- Stores Container -->
+      <div class="stores-grid" id="stores-grid-wrapper">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-heading-wrap text-center">
+        <span class="sub-kicker" data-en="VOICES OF KARNATAKA" data-kn="ಗ್ರಾಹಕರ ನಂಬಿಕೆ">VOICES OF KARNATAKA</span>
+        <h2 class="section-title" data-en="Loved by 85,000+ Karnataka Families" data-kn="೮೫,೦೦೦ಕ್ಕೂ ಹೆಚ್ಚು ತೃಪ್ತ ಕುಟುಂಬಗಳು">Loved by 85,000+ Karnataka Families</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote" 
+             data-en="“In our Bangalore household, morning begins with Kumbakonam-style filter coffee. Ksheera Siri cow milk gives that thick, frothy golden crema that no commercial packet milk ever could. Absolutely authentic!”"
+             data-kn="“ನಮ್ಮ ಮನೆಯಲ್ಲಿ ಮುಂಜಾನೆಯ ಫಿಲ್ಟರ್ ಕಾಫಿಗೆ ಈ ಹಾಲೇ ಬೆಸ್ಟ್. ಹಳ್ಳಿಗಳಲ್ಲಿ ಸಿಗುವಂಥ ಅದೇ ನೈಸರ್ಗಿಕ ರುಚಿ ಮತ್ತು ಘಮ ಇಲ್ಲಿದೆ.”">
+            “In our Bangalore household, morning begins with Kumbakonam-style filter coffee. Ksheera Siri cow milk gives that thick, frothy golden crema that no commercial packet milk ever could. Absolutely authentic!”
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">☕</div>
+            <div class="author-details">
+              <strong>Ganesh Venkatesh Bhat</strong>
+              <span>Malleshwaram, Bengaluru</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote"
+             data-en="“As a mother and paediatrician, milk safety was my greatest concern. Seeing Ksheera Siri’s zero-aflatoxin and zero-antibiotic lab reports daily gives me 100% peace of mind. Their curd (mosaru) is velvety and never acidic.”"
+             data-kn="“ಒಬ್ಬ ಮಕ್ಕಳ ವೈದ್ಯೆಯಾಗಿ ಮತ್ತು ತಾಯಿಯಾಗಿ, ಕಲಬೆರಕೆ ಇಲ್ಲದ ಹಾಲು ಸಿಗುವುದು ತುಂಬಾ ಮುಖ್ಯ. ಕ್ಷೀರ ಸಿರಿ ಮೊಸರು ಮತ್ತು ಹಾಲು ನೈಸರ್ಗಿಕವಾಗಿದ್ದು ಮಕ್ಕಳಿಗೆ ತುಂಬಾ ಒಳ್ಳೆಯದು.”">
+            “As a mother and paediatrician, milk safety was my greatest concern. Seeing Ksheera Siri’s zero-aflatoxin and zero-antibiotic lab reports daily gives me 100% peace of mind. Their curd (mosaru) is velvety and never acidic.”
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">👩‍⚕️</div>
+            <div class="author-details">
+              <strong>Dr. Meghana Patil</strong>
+              <span>Vidyanagar, Hubballi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote"
+             data-en="“For authentic Mysuru royal cuisine and Mysore Pak, ordinary ghee fails miserably. Ksheera Siri’s traditional Bilona Cow Ghee has that coarse golden grain (ಹರಳು ಹರಳಾದ ತುಪ್ಪ) and nostalgic village fragrance.”"
+             data-kn="“ಮೈಸೂರು ಪಾಕ್ ಮತ್ತು ಸಾಂಪ್ರದಾಯಿಕ ಸಿಹಿ ತಿನಿಸುಗಳಿಗೆ ಇವರ ಬಿಲೋನಾ ತುಪ್ಪ ಅದ್ಭುತ. ಅಸಲಿ ಹಸುವಿನ ಹರಳಿನಂತ ತುಪ್ಪದ ಪರಿಮಳ ಮನಸ್ಸಿಗೆ ತೃಪ್ತಿ ನೀಡುತ್ತದೆ.”">
+            “For authentic Mysuru royal cuisine and Mysore Pak, ordinary ghee fails miserably. Ksheera Siri’s traditional Bilona Cow Ghee has that coarse golden grain (ಹರಳು ಹರಳಾದ ತುಪ್ಪ) and nostalgic village fragrance.”
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">👨‍🍳</div>
+            <div class="author-details">
+              <strong>Chef Raghavendra Rao</strong>
+              <span>Saraswathipuram, Mysuru</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 7-Day Morning Milk Trial Configurator & CTA -->
+  <section class="trial-calculator-section" id="trial-calculator">
+    <div class="container">
+      <div class="calculator-card">
+        <div class="calc-grid">
+          <div class="calc-info">
+            <span class="sub-kicker kicker-gold" data-en="FRESH START PROMISE" data-kn="ತಾಜಾ ಮುಂಜಾನೆ">FRESH START PROMISE</span>
+            <h2 class="calc-title" data-en="Try Ksheera Siri for 7 Days at Your Doorstep" data-kn="೭ ದಿನಗಳ ಕಾಲ ನಮ್ಮ ತಾಜಾ ಹಾಲು ಸವಿದು ನೋಡಿ">Try Ksheera Siri for 7 Days at Your Doorstep</h2>
+            <p class="calc-desc" data-en="Zero commitment. Delivered in cold insulated morning crates before 5:30 AM. Choose your preferred milk package and book via WhatsApp in 30 seconds." data-kn="ಯಾವುದೇ ಠೇವಣಿ ಇಲ್ಲ. ಮುಂಜಾನೆ ೫:೩೦ ರೊಳಗಾಗಿ ನಿಮ್ಮ ಮನೆಬಾಗಿಲಿಗೆ. ನಿಮ್ಮ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ ಆರ್ಡರ್ ಮಾಡಿ.">
+              Zero commitment. Delivered in cold insulated morning crates before 5:30 AM. Choose your preferred milk package and book via WhatsApp in 30 seconds.
+            </p>
+            <ul class="calc-checklist">
+              <li data-en="✓ Free insulated morning bag included" data-kn="✓ ಉಚಿತ ಇನ್ಸುಲೇಟೆಡ್ ಬ್ಯಾಗ್">✓ Free insulated morning bag included</li>
+              <li data-en="✓ Pause or cancel anytime on WhatsApp" data-kn="✓ ಯಾವಾಗ ಬೇಕಾದರೂ ರದ್ದುಗೊಳಿಸುವ ಸೌಲಭ್ಯ">✓ Pause or cancel anytime on WhatsApp</li>
+              <li data-en="✓ Zero delivery charges across 5 cities" data-kn="✓ ಉಚಿತ ಮನೆ ವಿತರಣೆ">✓ Zero delivery charges across 5 cities</li>
+            </ul>
+          </div>
+
+          <div class="calc-box">
+            <h3 class="calc-box-title" data-en="Configure Your 7-Day Trial" data-kn="ನಿಮ್ಮ ೭ ದಿನಗಳ ಟ್ರಯಲ್ ಆಯ್ಕೆಮಾಡಿ">Configure Your 7-Day Trial</h3>
+            
+            <div class="form-group">
+              <label data-en="Select Dairy Product:" data-kn="ಉತ್ಪನ್ನ ಆಯ್ಕೆಮಾಡಿ:">Select Dairy Product:</label>
+              <select id="calc-product-select" class="calc-select">
+                <option value="cow-milk-500">Farm Fresh Cow Milk (500ml / day) — ₹32/day</option>
+                <option value="cow-milk-1000">Farm Fresh Cow Milk (1 Litre / day) — ₹64/day</option>
+                <option value="combo-pack">Breakfast Combo (500ml Milk + 450g Curd alternate days)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label data-en="Select Your City:" data-kn="ನಿಮ್ಮ ನಗರ:">Select Your City:</label>
+              <select id="calc-city-select" class="calc-select">
+                <option value="Bengaluru">Bengaluru (ಬೆಂಗಳೂರು)</option>
+                <option value="Mysuru">Mysuru (ಮೈಸೂರು)</option>
+                <option value="Mangaluru">Mangaluru (ಮಂಗಳೂರು)</option>
+                <option value="Hubballi">Hubballi-Dharwad (ಹುಬ್ಬಳ್ಳಿ-ಧಾರವಾಡ)</option>
+                <option value="Belagavi">Belagavi (ಬೆಳಗಾವಿ)</option>
+              </select>
+            </div>
+
+            <div class="calc-summary-row">
+              <div>
+                <span class="calc-sum-label" data-en="7-Day Trial Total:" data-kn="ಒಟ್ಟು ಮೊತ್ತ:">7-Day Trial Total:</span>
+                <span class="calc-sum-price" id="calc-display-price">₹224</span>
+                <span class="calc-discount-badge" data-en="Intro Offer: Free Glass Tumbler" data-kn="ವಿಶೇಷ ಕೊಡುಗೆ: ಉಚಿತ ಗ್ಲಾಸ್ ಟಂಬ್ಲರ್">Intro Offer: Free Glass Tumbler</span>
+              </div>
+            </div>
+
+            <button id="book-trial-whatsapp-btn" class="btn btn-whatsapp-large w-full">
+              <span>💬</span> <span data-en="Confirm 7-Day Trial on WhatsApp" data-kn="ವಾಟ್ಸಪ್‌ನಲ್ಲಿ ಬುಕ್ ಮಾಡಿ">Confirm 7-Day Trial on WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Farmer Support Section -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h4 data-en="Toll-Free Customer Care" data-kn="ಗ್ರಾಹಕ ಸೇವಾ ಸಹಾಯವಾಣಿ">Toll-Free Customer Care</h4>
+        <p>1800-425-KSHEERA (5743)</p>
+        <small data-en="Operational 5:00 AM - 10:00 PM Daily" data-kn="ಪ್ರತಿದಿನ ಬೆಳಿಗ್ಗೆ ೫:೦೦ ರಿಂದ ರಾತ್ರಿ ೧೦:೦೦ ರವರೆಗೆ">Operational 5:00 AM - 10:00 PM Daily</small>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <h4 data-en="Instant WhatsApp Support" data-kn="ವಾಟ್ಸಪ್ ಗ್ರಾಹಕ ಬೆಂಬಲ">Instant WhatsApp Support</h4>
+        <p>+91 98804 74744</p>
+        <small data-en="Typical response under 60 seconds" data-kn="ಕೇವಲ ೬೦ ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಉತ್ತರ">Typical response under 60 seconds</small>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">🌾</div>
+        <h4 data-en="Kisan Farmer Helpdesk" data-kn="ರೈತ ಮಿತ್ರ ಸಹಾಯ ಕೇಂದ್ರ">Kisan Farmer Helpdesk</h4>
+        <p>+91 98804 55500</p>
+        <small data-en="Dedicated to procurement & veterinary care" data-kn="ಹಾಲು ಸಂಗ್ರಹಣೆ ಮತ್ತು ಪಶುವೈದ್ಯಕೀಯ ಸೇವೆಗಾಗಿ">Dedicated to procurement & veterinary care</small>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <h4 data-en="Official Email Desk" data-kn="ಅಧಿಕೃತ ಇಮೇಲ್ ಸಂಪರ್ಕ">Official Email Desk</h4>
+        <p>care@ksheerasiri.in</p>
+        <small data-en="Corporate & distributor inquiries" data-kn="ಸಗಟು ವ್ಯಾಪಾರ ಮತ್ತು ಇತರೆ ವಿಚಾರಣೆಗೆ">Corporate & distributor inquiries</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <div class="brand-titles">
+          <span class="brand-title-main text-white">KSHEERA SIRI</span>
+          <span class="brand-title-sub text-gold">ಕ್ಷೀರ ಸಿರಿ • KARNATAKA</span>
+        </div>
+        <p class="footer-bio" data-en="Karnataka’s premier dairy initiative linking smallholder farmers in Mandya, Hassan, and Malnad with health-conscious families across the state. Dedicated to zero adulteration and rural prosperity." data-kn="ಮಂಡ್ಯ, ಹಾಸನ ಮತ್ತು ಮಲೆನಾಡಿನ ಸಣ್ಣ ರೈತರಿಂದ ಸಂಗ್ರಹಿಸಿ, ಗುಣಮಟ್ಟದ ಹಾಲನ್ನು ಕರ್ನಾಟಕದ ಜನರಿಗೆ ತಲುಪಿಸುವ ನಂಬಿಕಸ್ಥ ಸಂಸ್ಥೆ.">
+          Karnataka’s premier dairy initiative linking smallholder farmers in Mandya, Hassan, and Malnad with health-conscious families across the state. Dedicated to zero adulteration and rural prosperity.
+        </p>
+        <div class="footer-cert-row">
+          <span class="fssai-pill">FSSAI Lic. 11224333000198</span>
+          <span class="agmark-pill">Agmark Grade A Pure</span>
+          <span class="karnataka-flag-pill">ಕರ್ನಾಟಕ 💛❤️</span>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 data-en="Dairy Range" data-kn="ಉತ್ಪನ್ನಗಳು">Dairy Range</h4>
+        <ul>
+          <li><a href="#products">Farm Fresh Cow Milk (ಹಸು ಹಾಲು)</a></li>
+          <li><a href="#products">Velvet Set Curd (ಮಧುರ ಮೊಸರು)</a></li>
+          <li><a href="#products">Traditional Bilona Ghee (ತುಪ್ಪ)</a></li>
+          <li><a href="#products">Karnataka Farm Butter (ಬೆಣ್ಣೆ)</a></li>
+          <li><a href="#products">Fresh Malai Paneer (ಪನೀರ್)</a></li>
+          <li><a href="#products">Flavoured Badam Milk (ಸುವಾಸಿತ ಹಾಲು)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 data-en="Major Hubs" data-kn="ನಗರಗಳು">Major Hubs</h4>
+        <ul>
+          <li>Bengaluru (Jayanagar, Indiranagar, Malleshwaram)</li>
+          <li>Mysuru (Gokulam, Saraswathipuram)</li>
+          <li>Mangaluru (Kadri, Bejai)</li>
+          <li>Hubballi-Dharwad (Vidyanagar, Jubilee Circle)</li>
+          <li>Belagavi (Tilakwadi, Camp)</li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 data-en="Company & Trust" data-kn="ನಮ್ಮ ಸಂಸ್ಥೆ">Company & Trust</h4>
+        <ul>
+          <li><a href="#journey">Farm to Home Cold Chain</a></li>
+          <li><a href="#farmers">Farmer 75% Fair Revenue Fund</a></li>
+          <li><a href="#scanner">Live Batch Purity Verification</a></li>
+          <li><a href="#stores">Store Parlour Directory</a></li>
+          <li><a href="#">Terms & Doorstep Delivery Policies</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center">
+      <div class="container">
+        <p>© 2026 Ksheera Siri Dairy Products Pvt. Ltd. All rights reserved. Crafted with love in Karnataka 💛❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Cart Drawer -->
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <h3 data-en="Your Dairy Basket" data-kn="ನಿಮ್ಮ ಹಾಲಿನ ಬುಟ್ಟಿ">Your Dairy Basket</h3>
+      <button class="drawer-close-btn" id="close-cart-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="drawer-body" id="cart-items-container">
+      <!-- Items dynamically populated via JS -->
+      <div class="empty-cart-state">
+        <span class="empty-icon">🥛</span>
+        <p data-en="Your morning basket is empty. Add fresh cow milk or curd to start!" data-kn="ನಿಮ್ಮ ಬುಟ್ಟಿ ಖಾಲಿಯಾಗಿದೆ. ತಾಜಾ ಹಾಲು ಅಥವಾ ಮೊಸರು ಸೇರಿಸಿ!">Your morning basket is empty. Add fresh cow milk or curd to start!</p>
+      </div>
+    </div>
+    <div class="drawer-footer" id="cart-drawer-footer" style="display: none;">
+      <div class="drawer-total-row">
+        <span data-en="Estimated Morning Total:" data-kn="ಒಟ್ಟು ಮೊತ್ತ:">Estimated Morning Total:</span>
+        <strong id="cart-total-amount">₹0</strong>
+      </div>
+      <p class="cart-drop-note">🚚 Free doorstep delivery before 5:30 AM</p>
+      <button class="btn btn-whatsapp-large w-full" id="checkout-whatsapp-btn">
+        <span>💬</span> <span data-en="Place Order on WhatsApp" data-kn="ವಾಟ್ಸಪ್‌ನಲ್ಲಿ ಆರ್ಡರ್ ಮಾಡಿ">Place Order on WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Pincode Modal -->
+  <div class="pincode-modal" id="pincode-modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="close-pincode-btn">&times;</button>
+      <div class="modal-icon">📍</div>
+      <h3 data-en="Check Morning Delivery in Karnataka" data-kn="ನಿಮ್ಮ ಏರಿಯಾದಲ್ಲಿ ಡೆಲಿವರಿ ಲಭ್ಯವಿದೆಯೇ ನೋಡಿ">Check Morning Delivery in Karnataka</h3>
+      <p data-en="Enter your 6-digit postal code to check early morning 5:30 AM cold-chain delivery." data-kn="ನಿಮ್ಮ ೬ ಅಂಕಿಯ ಪಿನ್‌ಕೋಡ್ ನಮೂದಿಸಿ.">
+        Enter your 6-digit postal code to check early morning 5:30 AM cold-chain delivery.
+      </p>
+      <div class="modal-input-row">
+        <input type="text" id="pincode-input" maxlength="6" placeholder="e.g. 560011, 570009, 580021" aria-label="Postal Pincode">
+        <button class="btn btn-primary" id="validate-pincode-btn" data-en="Check" data-kn="ಪರಿಶೀಲಿಸಿ">Check</button>
+      </div>
+      <div class="pincode-feedback" id="pincode-feedback"></div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Logic -->
+  <script>
+/**
+ * ==========================================================================
+ * KSHEERA SIRI (ಕ್ಷೀರ ಸಿರಿ) — INTERACTIVE APPLICATION CORE
+ * Bilingual Translation Engine, Products, Stores, Purity Scanner & Checkout
+ * ==========================================================================
+ */
+
+// Global State
+const appState = {
+  currentLang: 'en',
+  cart: [],
+  selectedCity: 'bengaluru',
+  activeProductFilter: 'all',
+  validPincodesPrefixes: ['560', '570', '575', '580', '590']
+};
+
+// 7 Signature Dairy Products
+const dairyProducts = [
+  {
+    id: 1,
+    category: 'milk',
+    name_en: 'Farm Fresh Cow Milk',
+    name_kn: 'ಹಸು ಹಾಲು (Farm Fresh)',
+    badge_en: 'Morning Cold Drop',
+    badge_kn: 'ಮುಂಜಾನೆಯ ತಾಜಾ ಹಾಲು',
+    emoji: '🥛',
+    desc_en: '100% natural, antibiotic-free whole cow milk. Min 3.8% Fat & 8.7% SNF. Zero water dilution.',
+    desc_kn: 'ಯಾವುದೇ ರಾಸಾಯನಿಕ, ನೀರು ಅಥವಾ ಪ್ರಿಸರ್ವೇಟಿವ್ ಇಲ್ಲದ ಅಪ್ಪಟ ಹಸು ಹಾಲು.',
+    price: 32,
+    pack_en: '500ml Cold Pouch',
+    pack_kn: '೫೦೦ ಮಿ.ಲೀ. ಪ್ಯಾಕ್'
+  },
+  {
+    id: 2,
+    category: 'curd',
+    name_en: 'Velvet Set Curd (Mosaru)',
+    name_kn: 'ಮಧುರ ಗಟ್ಟಿ ಮೊಸರು',
+    badge_en: 'Probiotic Rich',
+    badge_kn: 'ಪ್ರೊಬಯೋಟಿಕ್ ಯುಕ್ತ',
+    emoji: '🥣',
+    desc_en: 'Traditional thick set curd with live bacterial culture. Naturally sweet, zero gelatin or starches.',
+    desc_kn: 'ಅಜ್ಜಿಯ ಕೈ ರುಚಿಯ ಸಾಂಪ್ರದಾಯಿಕ ಗಟ್ಟಿ ಮೊಸರು. ಹೊಟ್ಟೆಯ ಆರೋಗ್ಯಕ್ಕೆ ಅತ್ಯುತ್ತಮ.',
+    price: 35,
+    pack_en: '450g Fresh Tub',
+    pack_kn: '೪೫೦ ಗ್ರಾಂ ಟಬ್'
+  },
+  {
+    id: 3,
+    category: 'ghee',
+    name_en: 'Traditional Bilona Cow Ghee',
+    name_kn: 'ಸಾಂಪ್ರದಾಯಿಕ ಬಲೋನಾ ತುಪ್ಪ',
+    badge_en: 'Curd Churned Bilona',
+    badge_kn: 'ಮಂಥನ ಪದ್ಧತಿಯ ತುಪ್ಪ',
+    emoji: '🧈',
+    desc_en: 'Handcrafted by churning whole milk curd. Coarse golden granules with an intoxicating village aroma.',
+    desc_kn: 'ಹರಳಿನಂತ ಬಂಗಾರದ ತುಪ್ಪ. ಮೈಸೂರು ಪಾಕ್, ಹೋಳಿಗೆ ಹಾಗೂ ಊಟಕ್ಕೆ ಸಾಟಿಯಿಲ್ಲದ ಸುವಾಸನೆ.',
+    price: 650,
+    pack_en: '500ml Glass Jar',
+    pack_kn: '೫೦೦ ಮಿ.ಲೀ. ಗ್ಲಾಸ್ ಜಾರ್'
+  },
+  {
+    id: 4,
+    category: 'ghee',
+    name_en: 'Karnataka Farm Butter',
+    name_kn: 'ದಾವಣಗೆರೆ ಶೈಲಿಯ ಹಳ್ಳಿ ಬೆಣ್ಣೆ',
+    badge_en: 'Freshly Churned',
+    badge_kn: 'ತಾಜಾ ಬೆಣ್ಣೆ',
+    emoji: '🥞',
+    desc_en: 'Fresh, unsalted white and golden butter. The gold standard for Davanagere Benne Dosa & warm rotis.',
+    desc_kn: 'ದಾವಣಗೆರೆ ಬೆಣ್ಣೆ ದೋಸೆ, ಅಕ್ಕಿ ರೊಟ್ಟಿ ಹಾಗೂ ಬಿಸಿ ಅನ್ನಕ್ಕೆ ಹೇಳಿ ಮಾಡಿಸಿದ ಬೆಣ್ಣೆ.',
+    price: 115,
+    pack_en: '200g Fresh Pack',
+    pack_kn: '೨೦೦ ಗ್ರಾಂ ಪ್ಯಾಕ್'
+  },
+  {
+    id: 5,
+    category: 'paneer',
+    name_en: 'Soft Malai Paneer',
+    name_kn: 'ತಾಜಾ ಮಲೈ ಪನೀರ್',
+    badge_en: '18g Protein / 100g',
+    badge_kn: 'ಪ್ರೋಟೀನ್ ಸಮೃದ್ಧ',
+    emoji: '🧀',
+    desc_en: 'Melt-in-mouth cottage cheese crafted from single-origin morning milk. No citric preservatives.',
+    desc_kn: 'ಬಾಯಲ್ಲಿ ಕರಗುವ ಅತ್ಯಂತ ಮೃದುವಾದ ಮತ್ತು ನೈಸರ್ಗಿಕ ಪೋಷಕಾಂಶಗಳಿರುವ ತಾಜಾ ಪನೀರ್.',
+    price: 110,
+    pack_en: '200g Vacuum Fresh',
+    pack_kn: '೨೦೦ ಗ್ರಾಂ ಪ್ಯಾಕ್'
+  },
+  {
+    id: 6,
+    category: 'paneer',
+    name_en: 'Artisanal Farmstead Cheese',
+    name_kn: 'ಫಾರ್ಮ್‌ಸ್ಟೆಡ್ ಚೀಸ್',
+    badge_en: 'Small-Batch Craft',
+    badge_kn: 'ಕರಕುಶಲ ಚೀಸ್',
+    emoji: '🍕',
+    desc_en: 'Mild gouda and stretchy fresh mozzarella made locally at our Malnad micro-creameries.',
+    desc_kn: 'ಮಲೆನಾಡಿನ ಡೈರಿ ಫಾರ್ಮ್‌ಗಳಲ್ಲಿ ತಯಾರಿಸಿದ ಶುದ್ಧ ಮತ್ತು ರುಚಿಕರ ಚೀಸ್.',
+    price: 185,
+    pack_en: '200g Artisan Block',
+    pack_kn: '೨೦೦ ಗ್ರಾಂ ಬ್ಲಾಕ್'
+  },
+  {
+    id: 7,
+    category: 'flavoured',
+    name_en: 'Roasted Badam & Elaichi Milk',
+    name_kn: 'ಬಾದಾಮಿ-ಏಲಕ್ಕಿ ಸುವಾಸಿತ ಹಾಲು',
+    badge_en: 'Real Coorg Cardamom',
+    badge_kn: 'ಕೊಡಗಿನ ಅಸಲಿ ಏಲಕ್ಕಿ',
+    emoji: '🧋',
+    desc_en: 'Chilled whole milk infused with California roasted badam slivers, Kashmiri saffron, and Coorg elaichi.',
+    desc_kn: 'ಕೊಡಗಿನ ಏಲಕ್ಕಿ ಮತ್ತು ಅಸಲಿ ಬಾದಾಮಿ-ಕೇಸರಿ ಸತ್ವವಿರುವ ಅತ್ಯಂತ ರುಚಿಕರ ತಂಪು ಹಾಲು.',
+    price: 45,
+    pack_en: '200ml Chilled Bottle',
+    pack_kn: '೨೦೦ ಮಿ.ಲೀ. ಬಾಟಲ್'
+  }
+];
+
+// Karnataka Stores Directory across 5 Key Cities
+const storeLocations = {
+  bengaluru: [
+    {
+      name: 'Ksheera Siri Flagship Parlour',
+      locality: 'Jayanagar 4th Block',
+      address: '14th Main Rd, Opp. Post Office Circle, Bengaluru 560011',
+      timings: '05:30 AM - 09:30 PM',
+      stock_en: '🟢 Fresh Morning Batch Ready',
+      stock_kn: '🟢 ಇಂದಿನ ತಾಜಾ ಹಾಲು ಲಭ್ಯವಿದೆ',
+      map_query: 'Jayanagar+4th+Block+Bengaluru'
+    },
+    {
+      name: 'Indiranagar Dairy Lounge',
+      locality: '100ft Road, Indiranagar',
+      address: 'Near 12th Main Junction, Indiranagar, Bengaluru 560038',
+      timings: '06:00 AM - 10:00 PM',
+      stock_en: '🟢 Fresh Paneer Available',
+      stock_kn: '🟢 ತಾಜಾ ಪನೀರ್ ಲಭ್ಯವಿದೆ',
+      map_query: '100ft+Road+Indiranagar+Bengaluru'
+    },
+    {
+      name: 'Malleshwaram Heritage Milk Point',
+      locality: '8th Cross, Margosa Road',
+      address: 'Near Circle Maramma Temple, Bengaluru 560003',
+      timings: '05:30 AM - 09:00 PM',
+      stock_en: '🟢 Fresh Bilona Ghee on Tap',
+      stock_kn: '🟢 ಶುದ್ಧ ತುಪ್ಪ ಲಭ್ಯವಿದೆ',
+      map_query: 'Margosa+Road+Malleshwaram+Bengaluru'
+    },
+    {
+      name: 'Whitefield Green Dairy Hub',
+      locality: 'ITPL Main Road',
+      address: 'Opposite Prestige Ozone, Whitefield, Bengaluru 560066',
+      timings: '06:00 AM - 09:30 PM',
+      stock_en: '🟢 Morning Milk & Curd Ready',
+      stock_kn: '🟢 ಹಾಲು ಮತ್ತು ಮೊಸರು ಸಿದ್ಧವಿದೆ',
+      map_query: 'Whitefield+ITPL+Bengaluru'
+    }
+  ],
+  mysuru: [
+    {
+      name: 'Mysuru Heritage Milk Centre',
+      locality: 'Saraswathipuram',
+      address: 'Near Swimming Pool Circle, Saraswathipuram, Mysuru 570009',
+      timings: '05:30 AM - 09:00 PM',
+      stock_en: '🟢 Fresh Morning Batch Ready',
+      stock_kn: '🟢 ಬೆಳಗಿನ ಹಾಲು ಲಭ್ಯವಿದೆ',
+      map_query: 'Saraswathipuram+Mysuru'
+    },
+    {
+      name: 'Gokulam Organic Dairy Parlour',
+      locality: '3rd Stage, Gokulam',
+      address: 'Opp. Doctors Corner, Gokulam, Mysuru 570002',
+      timings: '06:00 AM - 09:30 PM',
+      stock_en: '🟢 Bilona Ghee & Butter Ready',
+      stock_kn: '🟢 ತುಪ್ಪ ಮತ್ತು ಬೆಣ್ಣೆ ಲಭ್ಯವಿದೆ',
+      map_query: 'Gokulam+Mysuru'
+    }
+  ],
+  mangaluru: [
+    {
+      name: 'Coastal Ksheera Siri Booth',
+      locality: 'Kadri Hills',
+      address: 'Near Kadri Manjunatha Temple Road, Mangaluru 575002',
+      timings: '05:30 AM - 08:30 PM',
+      stock_en: '🟢 Fresh Cold Milk Ready',
+      stock_kn: '🟢 ತಾಜಾ ಹಾಲು ಲಭ್ಯವಿದೆ',
+      map_query: 'Kadri+Mangaluru'
+    },
+    {
+      name: 'Bejai Fresh Dairy Store',
+      locality: 'Bejai New Road',
+      address: 'Opposite KSRTC Main Terminal, Mangaluru 575004',
+      timings: '06:00 AM - 09:00 PM',
+      stock_en: '🟢 Fresh Curd Tubs Ready',
+      stock_kn: '🟢 ಗಟ್ಟಿ ಮೊಸರು ಲಭ್ಯವಿದೆ',
+      map_query: 'Bejai+Mangaluru'
+    }
+  ],
+  hubballi: [
+    {
+      name: 'Vidyanagar Dairy Parlour',
+      locality: 'Shirur Park Road',
+      address: 'Near KIMS Main Gate, Vidyanagar, Hubballi 580021',
+      timings: '06:00 AM - 09:00 PM',
+      stock_en: '🟢 Fresh Morning Batch Ready',
+      stock_kn: '🟢 ತಾಜಾ ಹಾಲು ಲಭ್ಯವಿದೆ',
+      map_query: 'Vidyanagar+Hubballi'
+    },
+    {
+      name: 'Dharwad Heritage Hub',
+      locality: 'Jubilee Circle',
+      address: 'Station Road, Near Court Circle, Dharwad 580001',
+      timings: '06:00 AM - 09:30 PM',
+      stock_en: '🟢 Pure Milk & Ghee Stocked',
+      stock_kn: '🟢 ಹಾಲು ಹಾಗೂ ತುಪ್ಪ ಲಭ್ಯವಿದೆ',
+      map_query: 'Jubilee+Circle+Dharwad'
+    }
+  ],
+  belagavi: [
+    {
+      name: 'Tilakwadi Fresh Dairy Express',
+      locality: 'Congress Road, Tilakwadi',
+      address: 'Near 2nd Railway Gate, Tilakwadi, Belagavi 590006',
+      timings: '06:00 AM - 08:30 PM',
+      stock_en: '🟢 Fresh Morning Batch Ready',
+      stock_kn: '🟢 ಬೆಳಗಿನ ಹಾಲು ಸಿದ್ಧವಿದೆ',
+      map_query: 'Tilakwadi+Belagavi'
+    },
+    {
+      name: 'Camp Market Milk Depot',
+      locality: 'Camp Cantonment',
+      address: 'Near Military Camp Gate, Belagavi 590001',
+      timings: '06:00 AM - 09:00 PM',
+      stock_en: '🟢 Pure Butter & Paneer Ready',
+      stock_kn: '🟢 ಬೆಣ್ಣೆ ಮತ್ತು ಪನೀರ್ ಲಭ್ಯವಿದೆ',
+      map_query: 'Camp+Belagavi'
+    }
+  ]
+};
+
+// Batch Telemetry Database for Purity Scanner
+const batchDatabase = {
+  'MND-0430-A': {
+    cluster: 'Mandya (Srirangapatna Dairy Cluster)',
+    time: 'Today 04:30 AM',
+    temp: '3.8°C (Cold-Chain Verified)',
+    fat: '3.9%',
+    snf: '8.8%',
+    adulterants: '0.0% (Zero Detergent, Zero Urea)',
+    aflatoxin: 'Passed (< 0.05 ppb Safe Limit)',
+    farmers_count: '142 smallholders'
+  },
+  'HSN-0515-B': {
+    cluster: 'Hassan (Holenarasipura Cooperative)',
+    time: 'Today 05:15 AM',
+    temp: '3.7°C (Cold-Chain Verified)',
+    fat: '4.1%',
+    snf: '8.9%',
+    adulterants: '0.0% (Zero Water Dilution)',
+    aflatoxin: 'Passed (Undetected)',
+    farmers_count: '98 smallholders'
+  },
+  'MLN-0600-C': {
+    cluster: 'Malnad Shimoga (Tirthahalli Pastures)',
+    time: 'Today 06:00 AM',
+    temp: '3.9°C (Cold-Chain Verified)',
+    fat: '4.2%',
+    snf: '9.0%',
+    adulterants: '0.0% (100% Single Origin Pure)',
+    aflatoxin: 'Passed (A2 Certified)',
+    farmers_count: '115 smallholders'
+  }
+};
+
+// DOM Content Loaded Handler
+document.addEventListener('DOMContentLoaded', () => {
+  initLanguageEngine();
+  renderProductsCatalog('all');
+  renderStoresList('bengaluru');
+  initPurityScanner();
+  initTrialCalculator();
+  initCartDrawer();
+  initPincodeModal();
+  initMobileMenu();
+});
+
+/* ==========================================================================
+   1. BILINGUAL LANGUAGE ENGINE (ENGLISH <-> KANNADA)
+   ========================================================================== */
+
+function initLanguageEngine() {
+  const langBtn = document.getElementById('lang-btn');
+  const langIndicator = document.getElementById('lang-indicator');
+
+  langBtn.addEventListener('click', () => {
+    appState.currentLang = appState.currentLang === 'en' ? 'kn' : 'en';
+    document.documentElement.setAttribute('data-lang', appState.currentLang);
+
+    if (appState.currentLang === 'kn') {
+      langIndicator.textContent = 'ಕನ್ನಡ (KN)';
+    } else {
+      langIndicator.textContent = 'English (EN)';
+    }
+
+    // Update all elements with data-en & data-kn attributes
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const text = el.getAttribute(`data-${appState.currentLang}`);
+      if (text) {
+        el.textContent = text;
+      }
+    });
+
+    // Re-render dynamic lists with new language context
+    renderProductsCatalog(appState.activeProductFilter);
+    renderStoresList(appState.selectedCity);
+    updateCartUI();
+  });
+}
+
+/* ==========================================================================
+   2. PRODUCT SHOWCASE RENDERING & CATEGORY FILTERING
+   ========================================================================== */
+
+function renderProductsCatalog(category) {
+  appState.activeProductFilter = category;
+  const container = document.getElementById('products-catalog');
+  if (!container) return;
+
+  container.innerHTML = '';
+  const filtered = category === 'all' 
+    ? dairyProducts 
+    : dairyProducts.filter(item => item.category === category);
+
+  filtered.forEach(p => {
+    const card = document.createElement('article');
+    card.className = 'product-item-card';
+
+    const isKn = appState.currentLang === 'kn';
+    const title = isKn ? p.name_kn : p.name_en;
+    const subTitle = isKn ? p.name_en : p.name_kn;
+    const desc = isKn ? p.desc_kn : p.desc_en;
+    const badge = isKn ? p.badge_kn : p.badge_en;
+    const pack = isKn ? p.pack_kn : p.pack_en;
+    const addBtnText = isKn ? '+ ಬುಟ್ಟಿಗೆ ಸೇರಿಸಿ' : '+ Add to Bag';
+
+    card.innerHTML = `
+      <div class="product-media">
+        <span class="product-badge-flag">${badge}</span>
+        <div class="product-icon">${p.emoji}</div>
+      </div>
+      <h3 class="product-title">${title}</h3>
+      <div class="product-kannada-sub">${subTitle}</div>
+      <p class="product-description">${desc}</p>
+      <div class="product-action-row">
+        <div class="product-price-box">
+          <span class="price-currency">₹${p.price}</span>
+          <span class="pack-size">${pack}</span>
+        </div>
+        <button class="btn btn-primary btn-sm add-cart-btn" data-id="${p.id}">
+          ${addBtnText}
+        </button>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+
+  // Attach Add to Cart Listeners
+  container.querySelectorAll('.add-cart-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const prodId = parseInt(btn.getAttribute('data-id'), 10);
+      addToCart(prodId);
+    });
+  });
+
+  // Bind filter buttons
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.classList.toggle('active', tab.getAttribute('data-filter') === category);
+  });
+}
+
+// Filter Tab Click Handlers
+document.querySelectorAll('.filter-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.getAttribute('data-filter');
+    renderProductsCatalog(filter);
+  });
+});
+
+/* ==========================================================================
+   3. PURITY SCANNER SIMULATOR (BATCH TRACEABILITY)
+   ========================================================================== */
+
+function initPurityScanner() {
+  const input = document.getElementById('batch-code-input');
+  const runBtn = document.getElementById('run-scan-btn');
+  const sampleChips = document.querySelectorAll('.sample-code-chip');
+
+  sampleChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const code = chip.getAttribute('data-code');
+      input.value = code;
+      executeScan(code);
+    });
+  });
+
+  runBtn.addEventListener('click', () => {
+    executeScan(input.value.trim());
+  });
+
+  // Execute initial scan on load
+  executeScan('MND-0430-A');
+}
+
+function executeScan(rawCode) {
+  const code = rawCode.toUpperCase();
+  const resultCard = document.getElementById('scan-result-container');
+  const data = batchDatabase[code] || batchDatabase['MND-0430-A'];
+
+  const isKn = appState.currentLang === 'kn';
+
+  resultCard.innerHTML = `
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E2E8F0; padding-bottom: 12px; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+      <div>
+        <h4 style="font-size: 1.15rem; color: #0B2545;">
+          ${isKn ? 'ಪರಿಶೀಲಿಸಿದ ಬ್ಯಾಚ್:' : 'Verified Batch:'} <span style="color: #1E5631;">${code}</span>
+        </h4>
+        <span style="font-size: 0.85rem; color: #64748B;">📍 ${data.cluster} • ⏰ ${data.time}</span>
+      </div>
+      <span style="background: #DCFCE7; color: #15803D; font-size: 0.78rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;">
+        ✓ ${isKn ? '೧೦೦% ಕಲಬೆರಕೆ-ಮುಕ್ತ ಪ್ರಮಾಣೀಕೃತ' : '100% Purity Certified'}
+      </span>
+    </div>
+
+    <div class="scan-result-grid">
+      <div class="scan-metric-box">
+        <strong>${data.fat}</strong>
+        <small>${isKn ? 'ನೈಸರ್ಗಿಕ ಕೊಬ್ಬು (Fat)' : 'Natural Milk Fat'}</small>
+      </div>
+      <div class="scan-metric-box">
+        <strong>${data.snf}</strong>
+        <small>${isKn ? 'ಎಸ್.ಎನ್.ಎಫ್ (SNF)' : 'Solid Not Fat (SNF)'}</small>
+      </div>
+      <div class="scan-metric-box">
+        <strong>${data.temp}</strong>
+        <small>${isKn ? 'ಶೀತಲೀಕರಣ ತಾಪಮಾನ' : 'Cold Storage Temp'}</small>
+      </div>
+      <div class="scan-metric-box">
+        <strong>${data.adulterants}</strong>
+        <small>${isKn ? 'ಕೃತಕ ಅಂಶಗಳು' : 'Adulterants Check'}</small>
+      </div>
+    </div>
+    
+    <div style="margin-top: 14px; font-size: 0.82rem; color: #475569; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+      <span>🛡️ FSSAI Central Lab Protocol #KA-9920-FMCG</span>
+      <span>👨‍🌾 Collected ethically from ${data.farmers_count}</span>
+    </div>
+  `;
+}
+
+/* ==========================================================================
+   4. STORE LOCATOR ENGINE
+   ========================================================================== */
+
+function renderStoresList(cityKey, searchQuery = '') {
+  appState.selectedCity = cityKey;
+  const container = document.getElementById('stores-grid-wrapper');
+  if (!container) return;
+
+  container.innerHTML = '';
+  const list = storeLocations[cityKey] || [];
+  const query = searchQuery.toLowerCase().trim();
+
+  const filtered = query === '' 
+    ? list 
+    : list.filter(s => s.locality.toLowerCase().includes(query) || s.address.toLowerCase().includes(query) || s.name.toLowerCase().includes(query));
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1/-1; text-align: center; padding: 40px 20px; background: white; border-radius: 12px; border: 1px dashed #CBD5E1;">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 8px;">📍</span>
+        <p style="color: #64748B;">No parlours found matching "<strong>${searchQuery}</strong>" in ${cityKey.toUpperCase()}. Try searching another locality or city.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const isKn = appState.currentLang === 'kn';
+
+  filtered.forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'store-item-card';
+
+    const stockMsg = isKn ? s.stock_kn : s.stock_en;
+    const dirBtn = isKn ? 'ಗೂಗಲ್ ಮ್ಯಾಪ್‌ನಲ್ಲಿ ನೋಡಿ →' : 'Get Directions →';
+
+    card.innerHTML = `
+      <div>
+        <h3 class="store-title">${s.name}</h3>
+        <div class="store-locality-tag">📍 ${s.locality}</div>
+        <p class="store-full-addr">${s.address}</p>
+        <p style="font-size: 0.8rem; color: #475569; margin-bottom: 12px;">⏰ ${s.timings}</p>
+      </div>
+      <div class="store-footer-meta">
+        <span class="store-stock-tag">${stockMsg}</span>
+        <a href="https://maps.google.com/?q=${encodeURIComponent(s.name + ' ' + s.address)}" target="_blank" class="store-map-link">
+          ${dirBtn}
+        </a>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  // Highlight active city button
+  document.querySelectorAll('.city-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-city') === cityKey);
+  });
+}
+
+// City Button Listeners
+document.querySelectorAll('.city-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const city = btn.getAttribute('data-city');
+    document.getElementById('store-search-input').value = '';
+    renderStoresList(city);
+  });
+});
+
+// Store Search Input
+const storeSearchInput = document.getElementById('store-search-input');
+const clearSearchBtn = document.getElementById('clear-store-search');
+
+if (storeSearchInput) {
+  storeSearchInput.addEventListener('input', (e) => {
+    renderStoresList(appState.selectedCity, e.target.value);
+  });
+}
+
+if (clearSearchBtn) {
+  clearSearchBtn.addEventListener('click', () => {
+    storeSearchInput.value = '';
+    renderStoresList(appState.selectedCity);
+  });
+}
+
+/* ==========================================================================
+   5. 7-DAY TRIAL CALCULATOR & WHATSAPP GENERATOR
+   ========================================================================== */
+
+function initTrialCalculator() {
+  const prodSelect = document.getElementById('calc-product-select');
+  const citySelect = document.getElementById('calc-city-select');
+  const priceDisplay = document.getElementById('calc-display-price');
+  const bookBtn = document.getElementById('book-trial-whatsapp-btn');
+
+  function calculatePrice() {
+    const prodVal = prodSelect.value;
+    let price = 224; // 32 * 7
+    let productName = 'Farm Fresh Cow Milk (500ml/day)';
+
+    if (prodVal === 'cow-milk-1000') {
+      price = 448; // 64 * 7
+      productName = 'Farm Fresh Cow Milk (1 Litre/day)';
+    } else if (prodVal === 'combo-pack') {
+      price = 330;
+      productName = 'Breakfast Combo (500ml Milk + Curd)';
+    }
+
+    priceDisplay.textContent = `₹${price}`;
+    return { price, productName, city: citySelect.value };
+  }
+
+  prodSelect.addEventListener('change', calculatePrice);
+  citySelect.addEventListener('change', calculatePrice);
+
+  bookBtn.addEventListener('click', () => {
+    const { price, productName, city } = calculatePrice();
+    const isKn = appState.currentLang === 'kn';
+
+    let msg = `Namaskara Ksheera Siri! I would like to book the *7-Day Fresh Morning Milk Trial*:\n\n` +
+              `📦 Package: ${productName}\n` +
+              `📍 City: ${city}\n` +
+              `💰 Trial Price: ₹${price} (Free doorstep delivery before 5:30 AM)\n\n` +
+              `Please confirm my morning slot!`;
+
+    if (isKn) {
+      msg = `ನಮಸ್ಕಾರ ಕ್ಷೀರ ಸಿರಿ ತಂಡಕ್ಕೆ! ನಾನು ೭ ದಿನಗಳ ಬೆಳಗಿನ ಹಾಲಿನ ಟ್ರಯಲ್ ಬುಕ್ ಮಾಡಲು ಬಯಸುತ್ತೇನೆ:\n\n` +
+            `📦 ಪ್ಯಾಕೇಜ್: ${productName}\n` +
+            `📍 ನಗರ: ${city}\n` +
+            `💰 ಮೊತ್ತ: ₹${price} (ಮುಂಜಾನೆ ೫:೩೦ ರೊಳಗೆ ಉಚಿತ ಮನೆ ವಿತರಣೆ)\n\n` +
+            `ದಯವಿಟ್ಟು ದೃಢೀಕರಿಸಿ!`;
+    }
+
+    window.open(`https://wa.me/919880474744?text=${encodeURIComponent(msg)}`, '_blank');
+  });
+
+  // Link other CTA buttons to scroll to trial calculator
+  const triggerBtns = ['hero-order-btn', 'subscribe-cta-btn', 'mobile-trial-btn'];
+  triggerBtns.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('click', () => {
+        document.getElementById('trial-calculator').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  });
+}
+
+/* ==========================================================================
+   6. CART DRAWER & INSTANT WHATSAPP CHECKOUT
+   ========================================================================== */
+
+function initCartDrawer() {
+  const cartBtn = document.getElementById('cart-btn');
+  const closeCartBtn = document.getElementById('close-cart-btn');
+  const cartDrawer = document.getElementById('cart-drawer');
+  const overlay = document.getElementById('drawer-overlay');
+  const checkoutBtn = document.getElementById('checkout-whatsapp-btn');
+
+  function openDrawer() {
+    cartDrawer.classList.add('open');
+    overlay.classList.add('active');
+    cartDrawer.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeDrawer() {
+    cartDrawer.classList.remove('open');
+    overlay.classList.remove('active');
+    cartDrawer.setAttribute('aria-hidden', 'true');
+  }
+
+  cartBtn.addEventListener('click', openDrawer);
+  closeCartBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+
+  checkoutBtn.addEventListener('click', () => {
+    if (appState.cart.length === 0) return;
+
+    const isKn = appState.currentLang === 'kn';
+    let summaryText = isKn ? `ನಮಸ್ಕಾರ ಕ್ಷೀರ ಸಿರಿ! ನಾನು ಈ ಕೆಳಗಿನ ತಾಜಾ ಉತ್ಪನ್ನಗಳನ್ನು ಆರ್ಡರ್ ಮಾಡಲು ಬಯಸುತ್ತೇನೆ:\n\n` 
+                           : `Namaskara Ksheera Siri! I would like to place an order for tomorrow morning:\n\n`;
+
+    let total = 0;
+    appState.cart.forEach((item, index) => {
+      const prod = dairyProducts.find(p => p.id === item.id);
+      const name = isKn ? prod.name_kn : prod.name_en;
+      const subtotal = prod.price * item.qty;
+      total += subtotal;
+      summaryText += `${index + 1}. ${name} (${prod.pack_en}) x ${item.qty} = ₹${subtotal}\n`;
+    });
+
+    summaryText += `\n💰 Total Amount: ₹${total}\n🚚 Requesting delivery before 05:30 AM.\nPlease share payment details!`;
+
+    window.open(`https://wa.me/919880474744?text=${encodeURIComponent(summaryText)}`, '_blank');
+  });
+}
+
+function addToCart(productId) {
+  const existing = appState.cart.find(item => item.id === productId);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    appState.cart.push({ id: productId, qty: 1 });
+  }
+
+  updateCartUI();
+  // Open cart drawer on first add
+  document.getElementById('cart-drawer').classList.add('open');
+  document.getElementById('drawer-overlay').classList.add('active');
+}
+
+function updateCartUI() {
+  const counter = document.getElementById('cart-counter');
+  const container = document.getElementById('cart-items-container');
+  const footer = document.getElementById('cart-drawer-footer');
+  const totalAmountEl = document.getElementById('cart-total-amount');
+
+  const totalCount = appState.cart.reduce((sum, item) => sum + item.qty, 0);
+  counter.textContent = totalCount;
+
+  if (appState.cart.length === 0) {
+    footer.style.display = 'none';
+    const isKn = appState.currentLang === 'kn';
+    container.innerHTML = `
+      <div class="empty-cart-state">
+        <span class="empty-icon">🥛</span>
+        <p>${isKn ? 'ನಿಮ್ಮ ಬುಟ್ಟಿ ಖಾಲಿಯಾಗಿದೆ. ತಾಜಾ ಹಾಲು ಅಥವಾ ಮೊಸರು ಸೇರಿಸಿ!' : 'Your morning basket is empty. Add fresh cow milk or curd to start!'}</p>
+      </div>
+    `;
+    return;
+  }
+
+  footer.style.display = 'block';
+  container.innerHTML = '';
+  let grandTotal = 0;
+  const isKn = appState.currentLang === 'kn';
+
+  appState.cart.forEach(item => {
+    const product = dairyProducts.find(p => p.id === item.id);
+    const itemTotal = product.price * item.qty;
+    grandTotal += itemTotal;
+
+    const row = document.createElement('div');
+    row.className = 'cart-item-row';
+    row.innerHTML = `
+      <div class="cart-item-info">
+        <strong>${isKn ? product.name_kn : product.name_en}</strong>
+        <small>₹${product.price} / ${product.pack_en}</small>
+      </div>
+      <div class="cart-item-qty">
+        <button class="qty-btn" onclick="modifyQty(${product.id}, -1)">-</button>
+        <span style="font-weight: 700; min-width: 20px; text-align: center;">${item.qty}</span>
+        <button class="qty-btn" onclick="modifyQty(${product.id}, 1)">+</button>
+      </div>
+    `;
+    container.appendChild(row);
+  });
+
+  totalAmountEl.textContent = `₹${grandTotal}`;
+}
+
+// Global Quantity Modifier
+window.modifyQty = function(productId, delta) {
+  const index = appState.cart.findIndex(i => i.id === productId);
+  if (index !== -1) {
+    appState.cart[index].qty += delta;
+    if (appState.cart[index].qty <= 0) {
+      appState.cart.splice(index, 1);
+    }
+    updateCartUI();
+  }
+};
+
+/* ==========================================================================
+   7. PINCODE VALIDATOR MODAL
+   ========================================================================== */
+
+function initPincodeModal() {
+  const openBtn = document.getElementById('pincode-trigger-btn');
+  const closeBtn = document.getElementById('close-pincode-btn');
+  const modal = document.getElementById('pincode-modal');
+  const validateBtn = document.getElementById('validate-pincode-btn');
+  const input = document.getElementById('pincode-input');
+  const feedback = document.getElementById('pincode-feedback');
+
+  openBtn.addEventListener('click', () => {
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    input.focus();
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    feedback.textContent = '';
+  });
+
+  validateBtn.addEventListener('click', () => {
+    const pin = input.value.trim();
+    const isKn = appState.currentLang === 'kn';
+
+    if (pin.length !== 6 || isNaN(pin)) {
+      feedback.className = 'pincode-feedback pincode-error';
+      feedback.textContent = isKn ? 'ದಯವಿಟ್ಟು ಸರಿಯಾದ ೬ ಅಂಕಿಯ ಪಿನ್‌ಕೋಡ್ ನಮೂದಿಸಿ.' : 'Please enter a valid 6-digit postal code.';
+      return;
+    }
+
+    const prefix = pin.substring(0, 3);
+    if (appState.validPincodesPrefixes.includes(prefix)) {
+      feedback.className = 'pincode-feedback pincode-success';
+      feedback.textContent = isKn 
+        ? `🎉 ಅಭಿನಂದನೆಗಳು! ಪಿನ್‌ಕೋಡ್ ${pin} ನಲ್ಲಿ ಮುಂಜಾನೆ ೫:೩೦ ರೊಳಗಾಗಿ ನೇರ ಡೆಲಿವರಿ ಲಭ್ಯವಿದೆ.`
+        : `🎉 Great news! Pincode ${pin} is eligible for 5:30 AM morning cold-chain delivery.`;
+    } else {
+      feedback.className = 'pincode-feedback pincode-error';
+      feedback.textContent = isKn
+        ? `ಕ್ಷಮಿಸಿ, ಪಿನ್‌ಕೋಡ್ ${pin} ನಲ್ಲಿ ಶೀಘ್ರದಲ್ಲೇ ಆರಂಭವಾಗಲಿದೆ. ಮೈಸೂರು, ಬೆಂಗಳೂರು, ಹುಬ್ಬಳ್ಳಿ ಅಥವಾ ಬೆಳಗಾವಿ ಪ್ರಯತ್ನಿಸಿ.`
+        : `We are currently not serving pincode ${pin}. Available across Bengaluru (560xxx), Mysuru (570xxx), Mangaluru (575xxx), Hubballi (580xxx) and Belagavi (590xxx).`;
+    }
+  });
+}
+
+/* ==========================================================================
+   8. MOBILE RESPONSIVE HAMBURGER NAVIGATION
+   ========================================================================== */
+
+function initMobileMenu() {
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobilePanel = document.getElementById('mobile-nav-panel');
+
+  if (toggleBtn && mobilePanel) {
+    toggleBtn.addEventListener('click', () => {
+      mobilePanel.classList.toggle('open');
+    });
+
+    mobilePanel.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobilePanel.classList.remove('open');
+      });
+    });
+  }
+}
+
+</script>
+</body>
+</html>
