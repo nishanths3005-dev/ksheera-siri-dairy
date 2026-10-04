@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ksheera Siri | Pure Karnataka Cow Milk & Farm Dairy</title>
+  <meta name="description" content="Pure, chilled cow milk, curd (mosaru), artisanal bilona ghee and paneer from Karnataka's local farmers. Delivered fresh daily by 5:30 AM across Bengaluru, Mysuru, Mangaluru, Hubballi & Belagavi.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>🥛</text></svg>">
+
+  <!-- Google Fonts: Modern Latin & Authentic Kannada -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500;600;700;800&family=Noto+Sans+Kannada:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Real-Time Notification Bar -->
+  <aside class="announcement-bar" aria-label="Announcement">
+    <div class="container announcement-inner">
+      <div class="announcement-left">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span class="live-pill" data-en="LIVE 4°C COLD CHAIN" data-kn="ಲೈವ್ ೪°C ಶೀತಲೀಕರಣ">LIVE 4°C COLD CHAIN</span>
+        <p id="announcement-text" 
+           data-en="Today's fresh morning batch dispatched at 4:45 AM from Mandya & Hassan | Next drop: Tomorrow 5:30 AM" 
+           data-kn="ಇಂದು ಮುಂಜಾನೆ 4:45ರ ತಾಜಾ ಹಾಲು ಮಂಡ್ಯ ಮತ್ತು ಹಾಸನದಿಂದ ಹೊರಟಿದೆ | ಮುಂದಿನ ಡೆಲಿವರಿ: ನಾಳೆ ಮುಂಜಾನೆ 5:30">
+          Today's fresh morning batch dispatched at 4:45 AM from Mandya & Hassan | Next drop: Tomorrow 5:30 AM
+        </p>
+      </div>
+      <div class="announcement-right">
+        <button id="pincode-trigger-btn" class="announcement-btn" data-en="📍 Check Pincode" data-kn="📍 ಪಿನ್‌ಕೋಡ್ ಪರಿಶೀಲಿಸಿ">📍 Check Pincode</button>
+        <div class="lang-switch-wrap">
+          <button id="lang-btn" class="lang-pill" aria-label="Switch Language to Kannada or English">
+            <span class="lang-text" id="lang-indicator">English / ಕನ್ನಡ</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand-identity">
+        <div class="brand-emblem">
+          <span class="emblem-icon">🥛</span>
+          <span class="emblem-leaf">🌿</span>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-title-main">KSHEERA SIRI</span>
+          <span class="brand-title-sub">ಕ್ಷೀರ ಸಿರಿ • KARNATAKA PURE</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="#products" class="nav-link" data-en="Products" data-kn="ಉತ್ಪನ್ನಗಳು">Products</a>
+        <a href="#journey" class="nav-link" data-en="Farm to Home" data-kn="ಫಾರ್ಮ್‌ನಿಂದ ಮನೆಗೆ">Farm to Home</a>
+        <a href="#farmers" class="nav-link" data-en="Farmer Impact" data-kn="ನಮ್ಮ ರೈತರು">Farmer Impact</a>
+        <a href="#scanner" class="nav-link" data-en="Purity Scanner" data-kn="ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆ">Purity Scanner</a>
+        <a href="#stores" class="nav-link" data-en="Store Locator" data-kn="ಮಳಿಗೆಗಳು">Store Locator</a>
+      </nav>
+
+      <div class="header-action-group">
+        <button id="cart-btn" class="cart-trigger-btn" aria-label="View Cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count" id="cart-counter">0</span>
+        </button>
+        <a href="https://wa.me/919880474744?text=Namaskara%20Ksheera%20Siri%20Team!%20I%20want%20to%20order%20fresh%20milk" target="_blank" class="btn btn-whatsapp-pill">
+          <span class="wa-icon">💬</span>
+          <span data-en="Order on WhatsApp" data-kn="ವಾಟ್ಸಪ್ ಆರ್ಡರ್">Order on WhatsApp</span>
+        </a>
+        <button id="subscribe-cta-btn" class="btn btn-primary" data-en="7-Day Milk Trial" data-kn="೭ ದಿನಗಳ ಟ್ರಯಲ್">7-Day Milk Trial</button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-panel" id="mobile-nav-panel">
+      <a href="#products" class="mobile-nav-link" data-en="Products" data-kn="ಉತ್ಪನ್ನಗಳು">Products</a>
+      <a href="#journey" class="mobile-nav-link" data-en="Farm to Home" data-kn="ಫಾರ್ಮ್‌ನಿಂದ ಮನೆಗೆ">Farm to Home</a>
+      <a href="#farmers" class="mobile-nav-link" data-en="Farmer Impact" data-kn="ನಮ್ಮ ರೈತರು">Farmer Impact</a>
+      <a href="#scanner" class="mobile-nav-link" data-en="Purity Scanner" data-kn="ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆ">Purity Scanner</a>
+      <a href="#stores" class="mobile-nav-link" data-en="Store Locator" data-kn="ಮಳಿಗೆಗಳು">Store Locator</a>
+      <div class="mobile-nav-actions">
+        <button class="btn btn-primary w-full" id="mobile-trial-btn" data-en="Book 7-Day Morning Trial" data-kn="೭ ದಿನಗಳ ಟ್ರಯಲ್ ಬುಕ್ ಮಾಡಿ">Book 7-Day Morning Trial</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Karnataka Dairy Farm Theme -->
+  <section class="hero-section">
+    <div class="hero-backdrop-pattern"></div>
+    <div class="container hero-grid">
+      <div class="hero-text-col">
+        <div class="hero-kicker-badge">
+          <span class="kicker-leaf">🌿</span>
+          <span data-en="100% Antibiotic-Free Single-Origin Cow Milk" data-kn="೧೦೦% ನೈಸರ್ಗಿಕ, ಆಂಟಿಬಯೋಟಿಕ್-ಮುಕ್ತ ಹಸು ಹಾಲು">100% Antibiotic-Free Single-Origin Cow Milk</span>
+        </div>
+        
+        <h1 class="hero-heading" data-en="Pure Milk from Karnataka’s Soil to Your Family’s Morning Cup." data-kn="ಕರ್ನಾಟಕದ ಹಸಿರು ಮಣ್ಣಿನಿಂದ ನಿಮ್ಮ ಕುಟುಂಬದ ಬೆಳಗಿನ ಕಪ್‌ಗೆ.">
+          Pure Milk from Karnataka’s Soil to Your Family’s Morning Cup.
+        </h1>
+
+        <p class="hero-subtext" data-en="Ethically procured from 12,000+ local smallholder farmers in Mandya, Hassan & Malnad. Instantly chilled to 4°C at village collection centres, rigorously tested for 24 purity parameters, and delivered silently before 5:30 AM." data-kn="ಮಂಡ್ಯ, ಹಾಸನ ಮತ್ತು ಮಲೆನಾಡಿನ ೧೨,೦೦೦ಕ್ಕೂ ಹೆಚ್ಚು ಸ್ಥಳೀಯ ರೈತರಿಂದ ನೇರ ಸಂಗ್ರಹ. ಕರೆದ ೪೫ ನಿಮಿಷಗಳಲ್ಲಿ ೪°C ಗೆ ಶೀತಲೀಕರಿಸಿ, ೨೪ ಲ್ಯಾಬ್ ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆಗಳ ನಂತರ ಮುಂಜಾನೆ ೫:೩೦ ರೊಳಗಾಗಿ ನಿಮ್ಮ ಮನೆಬಾಗಿಲಿಗೆ.">
+          Ethically procured from 12,000+ local smallholder farmers in Mandya, Hassan & Malnad. Instantly chilled to 4°C at village collection centres, rigorously tested for 24 purity parameters, and delivered silently before 5:30 AM.
+        </p>
+
+        <div class="hero-btn-row">
+          <button class="btn btn-primary btn-hero" id="hero-order-btn" data-en="Start 7-Day Fresh Trial (₹199)" data-kn="೭ ದಿನಗಳ ಟ್ರಯಲ್ ಪ್ರಾರಂಭಿಸಿ (₹೧೯೯)">
+            Start 7-Day Fresh Trial (₹199)
+          </button>
+          <a href="#journey" class="btn btn-glass btn-hero" data-en="Explore Farm Journey ↓" data-kn="ಹಾಲು ಸಂಗ್ರಹದ ಪ್ರಯಾಣ ನೋಡಿ ↓">
+            Explore Farm Journey ↓
+          </a>
+        </div>
+
+        <div class="hero-trust-bar">
+          <div class="trust-stat">
+            <span class="stat-highlight">75%</span>
+            <span class="stat-caption" data-en="Fair Price to Farmers" data-kn="ರೈತರಿಗೆ ನೇರ ಆದಾಯ">Fair Price to Farmers</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="trust-stat">
+            <span class="stat-highlight">4°C</span>
+            <span class="stat-caption" data-en="Unbroken Cold Chain" data-kn="ಶೀತಲೀಕರಣ ಗ್ಯಾರಂಟಿ">Unbroken Cold Chain</span>
+          </div>
+          <div class="stat-sep"></div>
+          <div class="trust-stat">
+            <span class="stat-highlight">0%</span>
+            <span class="stat-caption" data-en="Adulterants or Urea" data-kn="ಯಾವುದೇ ಕಲಬೆರಕೆ ಇಲ್ಲ">Adulterants or Urea</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Artboard -->
+      <div class="hero-visual-col">
+        <div class="farm-hero-card">
+          <div class="card-ambient-glow"></div>
+          <div class="card-inner-scene">
+            <div class="scene-header">
+              <span class="scene-origin-pill">🌾 Srirangapatna Dairy Cluster</span>
+              <span class="temp-badge">❄️ 3.8°C Storage</span>
+            </div>
+
+            <!-- Visual representation of authentic fresh Karnataka milk & brass tumbler -->
+            <div class="milk-tumbler-canvas">
+              <div class="glass-bottle-silhouette">
+                <div class="bottle-cap">KSHEERA SIRI</div>
+                <div class="bottle-neck"></div>
+                <div class="bottle-body">
+                  <div class="milk-liquid-fill">
+                    <div class="liquid-wave"></div>
+                  </div>
+                  <div class="bottle-label">
+                    <span class="label-brand">ಕ್ಷೀರ ಸಿರಿ</span>
+                    <span class="label-batch">Batch: B-0430-MND</span>
+                    <span class="label-snf">SNF: 8.8% | Fat: 3.9%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Karnataka brass Davara / Tumbler representation -->
+              <div class="brass-tumbler">
+                <div class="tumbler-froth"></div>
+                <div class="tumbler-body">
+                  <span class="brass-emboss">ಕನ್ನಡ ಕ್ಷೀರ</span>
+                </div>
+                <div class="steam-vapour"></div>
+              </div>
+            </div>
+
+            <!-- Floating Micro-Badges -->
+            <div class="floating-pill pill-top">
+              <span class="icon">✨</span>
+              <div>
+                <strong data-en="0 Preservatives" data-kn="ಯಾವುದೇ ಪ್ರಿಸರ್ವೇಟಿವ್ ಇಲ್ಲ">0 Preservatives</strong>
+                <small data-en="Only pure gentle pasteurisation" data-kn="ಕೇವಲ ನೈಸರ್ಗಿಕ ಪಾಶ್ಚರೀಕರಣ">Only pure gentle pasteurisation</small>
+              </div>
+            </div>
+
+            <div class="floating-pill pill-bottom">
+              <span class="icon">☕</span>
+              <div>
+                <strong data-en="Filter Kaapi Guarantee" data-kn="ಫಿಲ್ಟರ್ ಕಾಫಿಗೆ ಬೆಸ್ಟ್">Filter Kaapi Guarantee</strong>
+                <small data-en="Natural rich golden crema" data-kn="ನೈಸರ್ಗಿಕ ಕೆನೆ ಮತ್ತು ಪರಿಮಳ">Natural rich golden crema</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Metrics Banner -->
+  <section class="metrics-ticker">
+    <div class="container ticker-container">
+      <div class="ticker-box">
+        <span class="metric-num">12,450+</span>
+        <span class="metric-lbl" data-en="Karnataka Farmers Supported" data-kn="ಕರ್ನಾಟಕದ ರೈತ ಕುಟುಂಬಗಳು">Karnataka Farmers Supported</span>
+      </div>
+      <div class="ticker-box">
+        <span class="metric-num">48,000 L</span>
+        <span class="metric-lbl" data-en="Fresh Daily Procurement" data-kn="ದೈನಂದಿನ ಹಾಲು ಸಂಗ್ರಹ">Fresh Daily Procurement</span>
+      </div>
+      <div class="ticker-box">
+        <span class="metric-num">5 Cities</span>
+        <span class="metric-lbl" data-en="Bengaluru, Mysuru, Hubballi & more" data-kn="ಬೆಂಗಳೂರು, ಮೈಸೂರು, ಹುಬ್ಬಳ್ಳಿ...">Bengaluru, Mysuru, Hubballi & more</span>
+      </div>
+      <div class="ticker-box">
+        <span class="metric-num">24 Tests</span>
+        <span class="metric-lbl" data-en="Automated Lab Checks Daily" data-kn="ಪ್ರತಿದಿನ ೨೪ ಲ್ಯಾಬ್ ಪರೀಕ್ಷೆಗಳು">Automated Lab Checks Daily</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase Section (7 Core Products) -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-heading-wrap text-center">
+        <span class="sub-kicker" data-en="FARM FRESH DAIRY SELECTION" data-kn="ನಮ್ಮ ನೈಸರ್ಗಿಕ ಉತ್ಪನ್ನಗಳು">FARM FRESH DAIRY SELECTION</span>
+        <h2 class="section-title" data-en="Pure Karnataka Dairy for Every Meal" data-kn="ಕರ್ನಾಟಕದ ಪ್ರತಿಯೊಂದು ಕುಟುಂಬಕ್ಕೆ ಶುದ್ಧ ಹಾಲಿನ ಉತ್ಪನ್ನಗಳು">Pure Karnataka Dairy for Every Meal</h2>
+        <p class="section-lead" data-en="100% natural, untouched by hand, delivered cold every morning across Karnataka." data-kn="ಕೈ ಸೋಂಕದ, ಯಾವುದೇ ಕೃತಕ ಅಂಶಗಳಿಲ್ಲದ ಅಪ್ಪಟ ನೈಸರ್ಗಿಕ ಡೈರಿ ಉತ್ಪನ್ನಗಳು.">100% natural, untouched by hand, delivered cold every morning across Karnataka.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-bar" role="tablist">
+        <button class="filter-tab active" data-filter="all" data-en="All Products" data-kn="ಎಲ್ಲಾ ಉತ್ಪನ್ನಗಳು">All Products</button>
+        <button class="filter-tab" data-filter="milk" data-en="Milk" data-kn="ಹಾಲು">Milk</button>
+        <button class="filter-tab" data-filter="curd" data-en="Curd (Mosaru)" data-kn="ಮೊಸರು">Curd (Mosaru)</button>
+        <button class="filter-tab" data-filter="ghee" data-en="Ghee & Butter" data-kn="ತುಪ್ಪ & ಬೆಣ್ಣೆ">Ghee & Butter</button>
+        <button class="filter-tab" data-filter="paneer" data-en="Paneer & Cheese" data-kn="ಪನೀರ್ & ಚೀಸ್">Paneer & Cheese</button>
+        <button class="filter-tab" data-filter="flavoured" data-en="Flavoured Milk" data-kn="ಸುವಾಸಿತ ಹಾಲು">Flavoured Milk</button>
+      </div>
+
+      <!-- Dynamic Product Grid -->
+      <div class="products-grid" id="products-catalog" aria-live="polite">
+        <!-- Rendered via JavaScript with full English & Kannada localization -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Farm to Home Journey Section -->
+  <section class="journey-section" id="journey">
+    <div class="container">
+      <div class="section-heading-wrap text-center text-inverted">
+        <span class="sub-kicker kicker-gold" data-en="FROM PASTURE TO PORCH" data-kn="ಹಳ್ಳಿ ಮಣ್ಣಿನಿಂದ ನಿಮ್ಮ ಮನೆಗೆ">FROM PASTURE TO PORCH</span>
+        <h2 class="section-title text-white" data-en="The 4-Stage Cold-Chain Freshness Journey" data-kn="೪ ಹಂತಗಳ ಕಟ್ಟುನಿಟ್ಟಾದ ಶುದ್ಧತೆಯ ಪ್ರಯಾಣ">The 4-Stage Cold-Chain Freshness Journey</h2>
+        <p class="section-lead text-dim" data-en="Trace how your morning milk travels safely from rural Karnataka farms to your doorstep in under 18 hours." data-kn="ಹಳ್ಳಿಯ ಫಾರ್ಮ್‌ನಿಂದ ನಿಮ್ಮ ಮನೆ ಬಾಗಿಲಿಗೆ ಕೇವಲ ಕೆಲವೇ ಗಂಟೆಗಳಲ್ಲಿ ಹಾಲು ತಲುಪುವ ವೈಜ್ಞಾನಿಕ ವಿಧಾನ.">Trace how your morning milk travels safely from rural Karnataka farms to your doorstep in under 18 hours.</p>
+      </div>
+
+      <div class="journey-timeline">
+        <!-- Step 1 -->
+        <div class="timeline-card">
+          <div class="step-badge">STAGE 01</div>
+          <div class="step-clock">⏰ 04:30 AM</div>
+          <div class="step-emoji">🐄</div>
+          <h3 class="step-title" data-en="Ethical Milking at Dawn" data-kn="೧. ಮುಂಜಾನೆಯ ನೈಸರ್ಗಿಕ ಕರೆಯುವಿಕೆ">Ethical Milking at Dawn</h3>
+          <p class="step-desc" data-en="Healthy cows graze freely on green pastureland in Mandya and Hassan. Strict zero-oxytocin and zero-hormone policy verified by field vets." data-kn="ಮಂಡ್ಯ ಹಾಗೂ ಮಲೆನಾಡಿನಲ್ಲಿ ನೈಸರ್ಗಿಕ ಮೇವು ತಿನ್ನುವ ಹಸುಗಳು. ಯಾವುದೇ ಹಾರ್ಮೋನ್ ಇಂಜೆಕ್ಷನ್ ಇರುವುದಿಲ್ಲ.">Healthy cows graze freely on green pastureland in Mandya and Hassan. Strict zero-oxytocin and zero-hormone policy verified by field vets.</p>
+          <span class="step-meta" data-en="✓ Sourced from 12,000+ local farmers" data-kn="✓ ೧೨,೦೦೦+ ರೈತರಿಂದ ಸಂಗ್ರಹ">✓ Sourced from 12,000+ local farmers</span>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-card">
+          <div class="step-badge">STAGE 02</div>
+          <div class="step-clock">⏰ 05:15 AM</div>
+          <div class="step-emoji">❄️</div>
+          <h3 class="step-title" data-en="Rapid Chilling under 4°C" data-kn="೨. ೪°C ತ್ವರಿತ ಶೀತಲೀಕರಣ">Rapid Chilling under 4°C</h3>
+          <p class="step-desc" data-en="Within 45 minutes of milking, raw milk is brought to village Bulk Milk Coolers (BMCs) to immediately halt any microbial multiplication." data-kn="ಹಾಲು ಕರೆದ ೪೫ ನಿಮಿಷಗಳಲ್ಲಿ ಹಳ್ಳಿಯ ಕೂಲರ್‌ಗಳಲ್ಲಿ ೪ ಡಿಗ್ರಿಗೆ ತಣ್ಣಗಾಗಿಸಿ ಬ್ಯಾಕ್ಟೀರಿಯಾ ಬೆಳೆಯದಂತೆ ತಡೆಯಲಾಗುತ್ತದೆ.">Within 45 minutes of milking, raw milk is brought to village Bulk Milk Coolers (BMCs) to immediately halt any microbial multiplication.</p>
+          <span class="step-meta" data-en="✓ Eliminates need for chemical preservatives" data-kn="✓ ಯಾವುದೇ ಪ್ರಿಸರ್ವೇಟಿವ್ ಅಗತ್ಯವಿಲ್ಲ">✓ Eliminates need for chemical preservatives</span>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-card">
+          <div class="step-badge">STAGE 03</div>
+          <div class="step-clock">⏰ 08:30 AM</div>
+          <div class="step-emoji">🔬</div>
+          <h3 class="step-title" data-en="24-Point Automated Lab Test" data-kn="೩. ೨೪ ಲ್ಯಾಬ್ ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆ">24-Point Automated Lab Test</h3>
+          <p class="step-desc" data-en="State-of-the-art infrared spectroscopy verifies zero water adulteration, zero starch, zero urea, and confirms optimum 3.8% natural fat and 8.7% SNF." data-kn="ಯಾವುದೇ ಕಲಬೆರಕೆ, ನೀರು ಅಥವಾ ರಾಸಾಯನಿಕ ಇಲ್ಲದಿರುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಆಟೋಮೇಟೆಡ್ ಲ್ಯಾಬ್ ಪರೀಕ್ಷೆ.">State-of-the-art infrared spectroscopy verifies zero water adulteration, zero starch, zero urea, and confirms optimum 3.8% natural fat and 8.7% SNF.</p>
+          <span class="step-meta" data-en="✓ Certified FSSAI & Agmark Grade A" data-kn="✓ FSSAI ಹಾಗೂ ಆಗ್ಮಾರ್ಕ್ ಪ್ರಮಾಣೀಕೃತ">✓ Certified FSSAI & Agmark Grade A</span>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-card">
+          <div class="step-badge">STAGE 04</div>
+          <div class="step-clock">⏰ 05:30 AM</div>
+          <div class="step-emoji">🚪</div>
+          <h3 class="step-title" data-en="Silent Doorstep Drop" data-kn="೪. ಮುಂಜಾನೆಯ ಮನೆ ವಿತರಣೆ">Silent Doorstep Drop</h3>
+          <p class="step-desc" data-en="Insulated refrigerated delivery vans dispatch fresh milk packets and glass bottles to your door before sunrise, ready for fresh morning filter coffee." data-kn="ಬೆಳಗಿನ ಸೂರ್ಯೋದಯಕ್ಕಿಂತ ಮುಂಚಿತವಾಗಿ, ನಿಮ್ಮ ಮುಂಜಾನೆಯ ಕಾಫಿಗಾಗಿ ಶುದ್ಧ ಹಾಲು ಮನೆ ಬಾಗಿಲಿಗೆ ಸಿದ್ಧವಾಗಿರುತ್ತದೆ.">Insulated refrigerated delivery vans dispatch fresh milk packets and glass bottles to your door before sunrise, ready for fresh morning filter coffee.</p>
+          <span class="step-meta" data-en="✓ Delivered across 5 major Karnataka cities" data-kn="✓ ೫ ಪ್ರಮುಖ ನಗರಗಳಲ್ಲಿ ಲಭ್ಯ">✓ Delivered across 5 major Karnataka cities</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Batch Purity & Traceability Scanner Simulator -->
+  <section class="scanner-section" id="scanner">
+    <div class="container">
+      <div class="scanner-card">
+        <div class="scanner-header text-center">
+          <span class="sub-kicker" data-en="TRANSPARENT DAIRY" data-kn="ಪಾರದರ್ಶಕ ಗುಣಮಟ್ಟ">TRANSPARENT DAIRY</span>
+          <h2 class="section-title" data-en="Scan & Verify Your Milk Purity" data-kn="ನಿಮ್ಮ ಹಾಲಿನ ಪ್ಯಾಕೆಟ್ ಶುದ್ಧತೆಯನ್ನು ಪರೀಕ್ಷಿಸಿ">Scan & Verify Your Milk Purity</h2>
+          <p class="section-lead" data-en="Every Ksheera Siri packet comes stamped with a batch code. Test a sample batch code below to view real-time farm origin and lab test telemetry." data-kn="ಪ್ರತಿಯೊಂದು ಪ್ಯಾಕೆಟ್‌ನ ಕೋಡ್ ನಮೂದಿಸಿ, ಆ ಹಾಲು ಯಾವ ಹಳ್ಳಿಯ ಫಾರ್ಮ್‌ನಿಂದ ಬಂದಿದೆ ಮತ್ತು ಲ್ಯಾಬ್ ವರದಿ ಹೇಗಿದೆ ಎಂದು ಪರಿಶೀಲಿಸಿ.">Every Ksheera Siri packet comes stamped with a batch code. Test a sample batch code below to view real-time farm origin and lab test telemetry.</p>
+        </div>
+
+        <div class="scanner-form-wrap">
+          <div class="quick-batch-pills">
+            <span data-en="Click sample batch:" data-kn="ಮಾದರಿ ಕೋಡ್ ಕ್ಲಿಕ್ ಮಾಡಿ:">Click sample batch:</span>
+            <button class="sample-code-chip" data-code="MND-0430-A">MND-0430-A (Mandya)</button>
+            <button class="sample-code-chip" data-code="HSN-0515-B">HSN-0515-B (Hassan)</button>
+            <button class="sample-code-chip" data-code="MLN-0600-C">MLN-0600-C (Shimoga)</button>
+          </div>
+
+          <div class="scanner-input-group">
+            <input type="text" id="batch-code-input" placeholder="e.g. MND-0430-A" value="MND-0430-A" aria-label="Enter Milk Batch Code">
+            <button id="run-scan-btn" class="btn btn-primary" data-en="Verify Purity Certificate" data-kn="ಗುಣಮಟ್ಟ ಪರಿಶೀಲಿಸಿ">Verify Purity Certificate</button>
+          </div>
+
+          <!-- Dynamic Result Display -->
+          <div class="scan-result-card" id="scan-result-container">
+            <!-- Injected via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us & Karnataka Farmer Empowerment -->
+  <section class="farmers-section" id="farmers">
+    <div class="container">
+      <div class="farmers-grid">
+        <div class="farmer-visual-box">
+          <div class="farmer-portrait-wrapper">
+            <div class="farmer-badge-stamp">
+              <span class="stamp-icon">🌾</span>
+              <span class="stamp-text">KARNATAKA KISAN DIRECT</span>
+            </div>
+            <!-- Symbolic farmer representation with Karnataka towel/traditional attire aesthetic -->
+            <div class="farmer-avatar-canvas">
+              <div class="farmer-silhouette">🧑‍🌾</div>
+              <div class="farmer-quote-bubble">
+                <p data-en="“Because Ksheera Siri deposits payment directly every Tuesday with transparent fat measurement, my family bought solar milking machines and zero loans!”" 
+                   data-kn="“ಯಾವುದೇ ಮಧ್ಯವರ್ತಿಗಳಿಲ್ಲದೆ ನೇರವಾಗಿ ನಮ್ಮ ಬ್ಯಾಂಕ್ ಖಾತೆಗೆ ಹಣ ಬರುವುದರಿಂದ, ನಮ್ಮ ಸಂಸಾರ ಸಾಲ ಮುಕ್ತವಾಗಿದೆ!”">
+                  “Because Ksheera Siri deposits payment directly every Tuesday with transparent fat measurement, my family bought solar milking machines and zero loans!”
+                </p>
+                <cite>— <strong>Smt. Gowramma & Sri Ningegowda</strong>, Srirangapatna, Mandya</cite>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="farmer-content-box">
+          <span class="sub-kicker" data-en="ROOTS OF KARNATAKA" data-kn="ಕರ್ನಾಟಕದ ಅನ್ನದಾತರು">ROOTS OF KARNATAKA</span>
+          <h2 class="section-title" data-en="Empowering 12,000+ Dairy Families Across 8 Districts" data-kn="೮ ಜಿಲ್ಲೆಗಳ ೧೨,೦೦೦ಕ್ಕೂ ಹೆಚ್ಚು ರೈತ ಕುಟುಂಬಗಳ ಸಬಲೀಕರಣ">Empowering 12,000+ Dairy Families Across 8 Districts</h2>
+          <p class="body-p" data-en="At Ksheera Siri, we believe that pure milk can only come from content cows and respected farmers. By eliminating unprincipled middlemen, we ensure that a staggering 75% of every rupee spent by Karnataka families goes straight to the dairy farmers' accounts." data-kn="ಕ್ಷೀರ ಸಿರಿಯಲ್ಲಿ ನಾವು ಮಧ್ಯವರ್ತಿಗಳ ಹಾವಳಿಯನ್ನು ಸಂಪೂರ್ಣವಾಗಿ ನಿವಾರಿಸಿದ್ದೇವೆ. ಗ್ರಾಹಕರು ನೀಡುವ ಪ್ರತಿ ರೂಪಾಯಿಯಲ್ಲಿ ೭೫% ನಷ್ಟು ಹಣ ನೇರವಾಗಿ ನಮ್ಮ ರೈತರ ಕೈ ಸೇರುತ್ತದೆ.">
+            At Ksheera Siri, we believe that pure milk can only come from content cows and respected farmers. By eliminating unprincipled middlemen, we ensure that a staggering 75% of every rupee spent by Karnataka families goes straight to the dairy farmers' accounts.
+          </p>
+
+          <div class="farmer-perks-list">
+            <div class="perk-item">
+              <span class="perk-icon">💰</span>
+              <div>
+                <strong data-en="Weekly Direct Bank Transfer" data-kn="ಪ್ರತಿ ವಾರ ನೇರ ಬ್ಯಾಂಕ್ ಜಮೆ">Weekly Direct Bank Transfer</strong>
+                <p data-en="Zero middlemen deductions. 100% digital passbook linked to milk fat testing." data-kn="ಯಾವುದೇ ಕಮಿಷನ್ ಕಡಿತವಿಲ್ಲ. ಪಾರದರ್ಶಕ ಡಿಜಿಟಲ್ ತಪಾಸಣೆ.">Zero middlemen deductions. 100% digital passbook linked to milk fat testing.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon">🩺</span>
+              <div>
+                <strong data-en="Free Veterinary Care & Insurance" data-kn="ಉಚಿತ ಪಶುವೈದ್ಯಕೀಯ ಸೇವೆ">Free Veterinary Care & Insurance</strong>
+                <p data-en="Dedicated veterinary ambulances, preventive vaccines, and subsidized green fodder." data-kn="ಹಸುಗಳ ಆರೋಗ್ಯ ತಪಾಸಣೆಗೆ ವೈದ್ಯರ ಉಚಿತ ಭೇಟಿ ಮತ್ತು ಮೇವಿನ ಸಹಾಯ.">Dedicated veterinary ambulances, preventive vaccines, and subsidized green fodder.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon">🎓</span>
+              <div>
+                <strong data-en="Rural Children Education Scholarship" data-kn="ರೈತ ಮಕ್ಕಳ ವಿದ್ಯಾಭ್ಯಾಸಕ್ಕೆ ವಿದ್ಯಾರ್ಥಿವೇತನ">Rural Children Education Scholarship</strong>
+                <p data-en="A dedicated ₹1 from every litre is deposited into an educational fund for farmers' children." data-kn="ಪ್ರತಿ ಲೀಟರ್ ಹಾಲಿನಿಂದ ೧ ರೂಪಾಯಿ ರೈತ ಮಕ್ಕಳ ವಿದ್ಯಾಭ್ಯಾಸದ ನಿಧಿಗೆ.">A dedicated ₹1 from every litre is deposited into an educational fund for farmers' children.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Locator Section -->
+  <section class="stores-section" id="stores">
+    <div class="container">
+      <div class="section-heading-wrap text-center">
+        <span class="sub-kicker" data-en="FIND US IN YOUR CITY" data-kn="ನಮ್ಮ ಮಳಿಗೆಗಳು">FIND US IN YOUR CITY</span>
+        <h2 class="section-title" data-en="Ksheera Siri Parlours & Retail Stores" data-kn="ನಿಮ್ಮ ಸಮೀಪದ ಕ್ಷೀರ ಸಿರಿ ಶಾಪ್ ಹುಡುಕಿ">Ksheera Siri Parlours & Retail Stores</h2>
+        <p class="section-lead" data-en="Visit our dedicated milk experience parlours for warm badam milk, fresh paneer cutting counters, and pure bilona ghee." data-kn="ಬೆಂಗಳೂರು, ಮೈಸೂರು, ಮಂಗಳೂರು, ಹುಬ್ಬಳ್ಳಿ ಮತ್ತು ಬೆಳಗಾವಿಯ ನಮ್ಮ ಮಳಿಗೆಗಳಿಗೆ ಭೇಟಿ ನೀಡಿ.">Visit our dedicated milk experience parlours for warm badam milk, fresh paneer cutting counters, and pure bilona ghee.</p>
+      </div>
+
+      <!-- City Navigation Pills -->
+      <div class="city-filter-bar">
+        <button class="city-btn active" data-city="bengaluru">Bengaluru (ಬೆಂಗಳೂರು • 42 Stores)</button>
+        <button class="city-btn" data-city="mysuru">Mysuru (ಮೈಸೂರು • 12 Stores)</button>
+        <button class="city-btn" data-city="mangaluru">Mangaluru (ಮಂಗಳೂರು • 8 Stores)</button>
+        <button class="city-btn" data-city="hubballi">Hubballi-Dharwad (ಹುಬ್ಬಳ್ಳಿ • 9 Stores)</button>
+        <button class="city-btn" data-city="belagavi">Belagavi (ಬೆಳಗಾವಿ • 6 Stores)</button>
+      </div>
+
+      <!-- Search Input for Area / Pincode -->
+      <div class="store-search-bar">
+        <input type="text" id="store-search-input" placeholder="Search locality in selected city (e.g. Jayanagar, Gokulam, Kadri...)" aria-label="Search Locality">
+        <button class="btn btn-secondary btn-sm" id="clear-store-search">Clear</button>
+      </div>
+
+      <!-- Stores Container -->
+      <div class="stores-grid" id="stores-grid-wrapper">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-heading-wrap text-center">
+        <span class="sub-kicker" data-en="VOICES OF KARNATAKA" data-kn="ಗ್ರಾಹಕರ ನಂಬಿಕೆ">VOICES OF KARNATAKA</span>
+        <h2 class="section-title" data-en="Loved by 85,000+ Karnataka Families" data-kn="೮೫,೦೦೦ಕ್ಕೂ ಹೆಚ್ಚು ತೃಪ್ತ ಕುಟುಂಬಗಳು">Loved by 85,000+ Karnataka Families</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote" 
+             data-en="“In our Bangalore household, morning begins with Kumbakonam-style filter coffee. Ksheera Siri cow milk gives that thick, frothy golden crema that no commercial packet milk ever could. Absolutely authentic!”"
+             data-kn="“ನಮ್ಮ ಮನೆಯಲ್ಲಿ ಮುಂಜಾನೆಯ ಫಿಲ್ಟರ್ ಕಾಫಿಗೆ ಈ ಹಾಲೇ ಬೆಸ್ಟ್. ಹಳ್ಳಿಗಳಲ್ಲಿ ಸಿಗುವಂಥ ಅದೇ ನೈಸರ್ಗಿಕ ರುಚಿ ಮತ್ತು ಘಮ ಇಲ್ಲಿದೆ.”">
+            “In our Bangalore household, morning begins with Kumbakonam-style filter coffee. Ksheera Siri cow milk gives that thick, frothy golden crema that no commercial packet milk ever could. Absolutely authentic!”
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">☕</div>
+            <div class="author-details">
+              <strong>Ganesh Venkatesh Bhat</strong>
+              <span>Malleshwaram, Bengaluru</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote"
+             data-en="“As a mother and paediatrician, milk safety was my greatest concern. Seeing Ksheera Siri’s zero-aflatoxin and zero-antibiotic lab reports daily gives me 100% peace of mind. Their curd (mosaru) is velvety and never acidic.”"
+             data-kn="“ಒಬ್ಬ ಮಕ್ಕಳ ವೈದ್ಯೆಯಾಗಿ ಮತ್ತು ತಾಯಿಯಾಗಿ, ಕಲಬೆರಕೆ ಇಲ್ಲದ ಹಾಲು ಸಿಗುವುದು ತುಂಬಾ ಮುಖ್ಯ. ಕ್ಷೀರ ಸಿರಿ ಮೊಸರು ಮತ್ತು ಹಾಲು ನೈಸರ್ಗಿಕವಾಗಿದ್ದು ಮಕ್ಕಳಿಗೆ ತುಂಬಾ ಒಳ್ಳೆಯದು.”">
+            “As a mother and paediatrician, milk safety was my greatest concern. Seeing Ksheera Siri’s zero-aflatoxin and zero-antibiotic lab reports daily gives me 100% peace of mind. Their curd (mosaru) is velvety and never acidic.”
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">👩‍⚕️</div>
+            <div class="author-details">
+              <strong>Dr. Meghana Patil</strong>
+              <span>Vidyanagar, Hubballi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote"
+             data-en="“For authentic Mysuru royal cuisine and Mysore Pak, ordinary ghee fails miserably. Ksheera Siri’s traditional Bilona Cow Ghee has that coarse golden grain (ಹರಳು ಹರಳಾದ ತುಪ್ಪ) and nostalgic village fragrance.”"
+             data-kn="“ಮೈಸೂರು ಪಾಕ್ ಮತ್ತು ಸಾಂಪ್ರದಾಯಿಕ ಸಿಹಿ ತಿನಿಸುಗಳಿಗೆ ಇವರ ಬಿಲೋನಾ ತುಪ್ಪ ಅದ್ಭುತ. ಅಸಲಿ ಹಸುವಿನ ಹರಳಿನಂತ ತುಪ್ಪದ ಪರಿಮಳ ಮನಸ್ಸಿಗೆ ತೃಪ್ತಿ ನೀಡುತ್ತದೆ.”">
+            “For authentic Mysuru royal cuisine and Mysore Pak, ordinary ghee fails miserably. Ksheera Siri’s traditional Bilona Cow Ghee has that coarse golden grain (ಹರಳು ಹರಳಾದ ತುಪ್ಪ) and nostalgic village fragrance.”
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">👨‍🍳</div>
+            <div class="author-details">
+              <strong>Chef Raghavendra Rao</strong>
+              <span>Saraswathipuram, Mysuru</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 7-Day Morning Milk Trial Configurator & CTA -->
+  <section class="trial-calculator-section" id="trial-calculator">
+    <div class="container">
+      <div class="calculator-card">
+        <div class="calc-grid">
+          <div class="calc-info">
+            <span class="sub-kicker kicker-gold" data-en="FRESH START PROMISE" data-kn="ತಾಜಾ ಮುಂಜಾನೆ">FRESH START PROMISE</span>
+            <h2 class="calc-title" data-en="Try Ksheera Siri for 7 Days at Your Doorstep" data-kn="೭ ದಿನಗಳ ಕಾಲ ನಮ್ಮ ತಾಜಾ ಹಾಲು ಸವಿದು ನೋಡಿ">Try Ksheera Siri for 7 Days at Your Doorstep</h2>
+            <p class="calc-desc" data-en="Zero commitment. Delivered in cold insulated morning crates before 5:30 AM. Choose your preferred milk package and book via WhatsApp in 30 seconds." data-kn="ಯಾವುದೇ ಠೇವಣಿ ಇಲ್ಲ. ಮುಂಜಾನೆ ೫:೩೦ ರೊಳಗಾಗಿ ನಿಮ್ಮ ಮನೆಬಾಗಿಲಿಗೆ. ನಿಮ್ಮ ಆಯ್ಕೆಯನ್ನು ಆರಿಸಿ ಆರ್ಡರ್ ಮಾಡಿ.">
+              Zero commitment. Delivered in cold insulated morning crates before 5:30 AM. Choose your preferred milk package and book via WhatsApp in 30 seconds.
+            </p>
+            <ul class="calc-checklist">
+              <li data-en="✓ Free insulated morning bag included" data-kn="✓ ಉಚಿತ ಇನ್ಸುಲೇಟೆಡ್ ಬ್ಯಾಗ್">✓ Free insulated morning bag included</li>
+              <li data-en="✓ Pause or cancel anytime on WhatsApp" data-kn="✓ ಯಾವಾಗ ಬೇಕಾದರೂ ರದ್ದುಗೊಳಿಸುವ ಸೌಲಭ್ಯ">✓ Pause or cancel anytime on WhatsApp</li>
+              <li data-en="✓ Zero delivery charges across 5 cities" data-kn="✓ ಉಚಿತ ಮನೆ ವಿತರಣೆ">✓ Zero delivery charges across 5 cities</li>
+            </ul>
+          </div>
+
+          <div class="calc-box">
+            <h3 class="calc-box-title" data-en="Configure Your 7-Day Trial" data-kn="ನಿಮ್ಮ ೭ ದಿನಗಳ ಟ್ರಯಲ್ ಆಯ್ಕೆಮಾಡಿ">Configure Your 7-Day Trial</h3>
+            
+            <div class="form-group">
+              <label data-en="Select Dairy Product:" data-kn="ಉತ್ಪನ್ನ ಆಯ್ಕೆಮಾಡಿ:">Select Dairy Product:</label>
+              <select id="calc-product-select" class="calc-select">
+                <option value="cow-milk-500">Farm Fresh Cow Milk (500ml / day) — ₹32/day</option>
+                <option value="cow-milk-1000">Farm Fresh Cow Milk (1 Litre / day) — ₹64/day</option>
+                <option value="combo-pack">Breakfast Combo (500ml Milk + 450g Curd alternate days)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label data-en="Select Your City:" data-kn="ನಿಮ್ಮ ನಗರ:">Select Your City:</label>
+              <select id="calc-city-select" class="calc-select">
+                <option value="Bengaluru">Bengaluru (ಬೆಂಗಳೂರು)</option>
+                <option value="Mysuru">Mysuru (ಮೈಸೂರು)</option>
+                <option value="Mangaluru">Mangaluru (ಮಂಗಳೂರು)</option>
+                <option value="Hubballi">Hubballi-Dharwad (ಹುಬ್ಬಳ್ಳಿ-ಧಾರವಾಡ)</option>
+                <option value="Belagavi">Belagavi (ಬೆಳಗಾವಿ)</option>
+              </select>
+            </div>
+
+            <div class="calc-summary-row">
+              <div>
+                <span class="calc-sum-label" data-en="7-Day Trial Total:" data-kn="ಒಟ್ಟು ಮೊತ್ತ:">7-Day Trial Total:</span>
+                <span class="calc-sum-price" id="calc-display-price">₹224</span>
+                <span class="calc-discount-badge" data-en="Intro Offer: Free Glass Tumbler" data-kn="ವಿಶೇಷ ಕೊಡುಗೆ: ಉಚಿತ ಗ್ಲಾಸ್ ಟಂಬ್ಲರ್">Intro Offer: Free Glass Tumbler</span>
+              </div>
+            </div>
+
+            <button id="book-trial-whatsapp-btn" class="btn btn-whatsapp-large w-full">
+              <span>💬</span> <span data-en="Confirm 7-Day Trial on WhatsApp" data-kn="ವಾಟ್ಸಪ್‌ನಲ್ಲಿ ಬುಕ್ ಮಾಡಿ">Confirm 7-Day Trial on WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Farmer Support Section -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <h4 data-en="Toll-Free Customer Care" data-kn="ಗ್ರಾಹಕ ಸೇವಾ ಸಹಾಯವಾಣಿ">Toll-Free Customer Care</h4>
+        <p>1800-425-KSHEERA (5743)</p>
+        <small data-en="Operational 5:00 AM - 10:00 PM Daily" data-kn="ಪ್ರತಿದಿನ ಬೆಳಿಗ್ಗೆ ೫:೦೦ ರಿಂದ ರಾತ್ರಿ ೧೦:೦೦ ರವರೆಗೆ">Operational 5:00 AM - 10:00 PM Daily</small>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">💬</div>
+        <h4 data-en="Instant WhatsApp Support" data-kn="ವಾಟ್ಸಪ್ ಗ್ರಾಹಕ ಬೆಂಬಲ">Instant WhatsApp Support</h4>
+        <p>+91 98804 74744</p>
+        <small data-en="Typical response under 60 seconds" data-kn="ಕೇವಲ ೬೦ ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಉತ್ತರ">Typical response under 60 seconds</small>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">🌾</div>
+        <h4 data-en="Kisan Farmer Helpdesk" data-kn="ರೈತ ಮಿತ್ರ ಸಹಾಯ ಕೇಂದ್ರ">Kisan Farmer Helpdesk</h4>
+        <p>+91 98804 55500</p>
+        <small data-en="Dedicated to procurement & veterinary care" data-kn="ಹಾಲು ಸಂಗ್ರಹಣೆ ಮತ್ತು ಪಶುವೈದ್ಯಕೀಯ ಸೇವೆಗಾಗಿ">Dedicated to procurement & veterinary care</small>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <h4 data-en="Official Email Desk" data-kn="ಅಧಿಕೃತ ಇಮೇಲ್ ಸಂಪರ್ಕ">Official Email Desk</h4>
+        <p>care@ksheerasiri.in</p>
+        <small data-en="Corporate & distributor inquiries" data-kn="ಸಗಟು ವ್ಯಾಪಾರ ಮತ್ತು ಇತರೆ ವಿಚಾರಣೆಗೆ">Corporate & distributor inquiries</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <div class="brand-titles">
+          <span class="brand-title-main text-white">KSHEERA SIRI</span>
+          <span class="brand-title-sub text-gold">ಕ್ಷೀರ ಸಿರಿ • KARNATAKA</span>
+        </div>
+        <p class="footer-bio" data-en="Karnataka’s premier dairy initiative linking smallholder farmers in Mandya, Hassan, and Malnad with health-conscious families across the state. Dedicated to zero adulteration and rural prosperity." data-kn="ಮಂಡ್ಯ, ಹಾಸನ ಮತ್ತು ಮಲೆನಾಡಿನ ಸಣ್ಣ ರೈತರಿಂದ ಸಂಗ್ರಹಿಸಿ, ಗುಣಮಟ್ಟದ ಹಾಲನ್ನು ಕರ್ನಾಟಕದ ಜನರಿಗೆ ತಲುಪಿಸುವ ನಂಬಿಕಸ್ಥ ಸಂಸ್ಥೆ.">
+          Karnataka’s premier dairy initiative linking smallholder farmers in Mandya, Hassan, and Malnad with health-conscious families across the state. Dedicated to zero adulteration and rural prosperity.
+        </p>
+        <div class="footer-cert-row">
+          <span class="fssai-pill">FSSAI Lic. 11224333000198</span>
+          <span class="agmark-pill">Agmark Grade A Pure</span>
+          <span class="karnataka-flag-pill">ಕರ್ನಾಟಕ 💛❤️</span>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 data-en="Dairy Range" data-kn="ಉತ್ಪನ್ನಗಳು">Dairy Range</h4>
+        <ul>
+          <li><a href="#products">Farm Fresh Cow Milk (ಹಸು ಹಾಲು)</a></li>
+          <li><a href="#products">Velvet Set Curd (ಮಧುರ ಮೊಸರು)</a></li>
+          <li><a href="#products">Traditional Bilona Ghee (ತುಪ್ಪ)</a></li>
+          <li><a href="#products">Karnataka Farm Butter (ಬೆಣ್ಣೆ)</a></li>
+          <li><a href="#products">Fresh Malai Paneer (ಪನೀರ್)</a></li>
+          <li><a href="#products">Flavoured Badam Milk (ಸುವಾಸಿತ ಹಾಲು)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 data-en="Major Hubs" data-kn="ನಗರಗಳು">Major Hubs</h4>
+        <ul>
+          <li>Bengaluru (Jayanagar, Indiranagar, Malleshwaram)</li>
+          <li>Mysuru (Gokulam, Saraswathipuram)</li>
+          <li>Mangaluru (Kadri, Bejai)</li>
+          <li>Hubballi-Dharwad (Vidyanagar, Jubilee Circle)</li>
+          <li>Belagavi (Tilakwadi, Camp)</li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4 data-en="Company & Trust" data-kn="ನಮ್ಮ ಸಂಸ್ಥೆ">Company & Trust</h4>
+        <ul>
+          <li><a href="#journey">Farm to Home Cold Chain</a></li>
+          <li><a href="#farmers">Farmer 75% Fair Revenue Fund</a></li>
+          <li><a href="#scanner">Live Batch Purity Verification</a></li>
+          <li><a href="#stores">Store Parlour Directory</a></li>
+          <li><a href="#">Terms & Doorstep Delivery Policies</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center">
+      <div class="container">
+        <p>© 2026 Ksheera Siri Dairy Products Pvt. Ltd. All rights reserved. Crafted with love in Karnataka 💛❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Cart Drawer -->
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <h3 data-en="Your Dairy Basket" data-kn="ನಿಮ್ಮ ಹಾಲಿನ ಬುಟ್ಟಿ">Your Dairy Basket</h3>
+      <button class="drawer-close-btn" id="close-cart-btn" aria-label="Close Cart">&times;</button>
+    </div>
+    <div class="drawer-body" id="cart-items-container">
+      <!-- Items dynamically populated via JS -->
+      <div class="empty-cart-state">
+        <span class="empty-icon">🥛</span>
+        <p data-en="Your morning basket is empty. Add fresh cow milk or curd to start!" data-kn="ನಿಮ್ಮ ಬುಟ್ಟಿ ಖಾಲಿಯಾಗಿದೆ. ತಾಜಾ ಹಾಲು ಅಥವಾ ಮೊಸರು ಸೇರಿಸಿ!">Your morning basket is empty. Add fresh cow milk or curd to start!</p>
+      </div>
+    </div>
+    <div class="drawer-footer" id="cart-drawer-footer" style="display: none;">
+      <div class="drawer-total-row">
+        <span data-en="Estimated Morning Total:" data-kn="ಒಟ್ಟು ಮೊತ್ತ:">Estimated Morning Total:</span>
+        <strong id="cart-total-amount">₹0</strong>
+      </div>
+      <p class="cart-drop-note">🚚 Free doorstep delivery before 5:30 AM</p>
+      <button class="btn btn-whatsapp-large w-full" id="checkout-whatsapp-btn">
+        <span>💬</span> <span data-en="Place Order on WhatsApp" data-kn="ವಾಟ್ಸಪ್‌ನಲ್ಲಿ ಆರ್ಡರ್ ಮಾಡಿ">Place Order on WhatsApp</span>
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- Pincode Modal -->
+  <div class="pincode-modal" id="pincode-modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="close-pincode-btn">&times;</button>
+      <div class="modal-icon">📍</div>
+      <h3 data-en="Check Morning Delivery in Karnataka" data-kn="ನಿಮ್ಮ ಏರಿಯಾದಲ್ಲಿ ಡೆಲಿವರಿ ಲಭ್ಯವಿದೆಯೇ ನೋಡಿ">Check Morning Delivery in Karnataka</h3>
+      <p data-en="Enter your 6-digit postal code to check early morning 5:30 AM cold-chain delivery." data-kn="ನಿಮ್ಮ ೬ ಅಂಕಿಯ ಪಿನ್‌ಕೋಡ್ ನಮೂದಿಸಿ.">
+        Enter your 6-digit postal code to check early morning 5:30 AM cold-chain delivery.
+      </p>
+      <div class="modal-input-row">
+        <input type="text" id="pincode-input" maxlength="6" placeholder="e.g. 560011, 570009, 580021" aria-label="Postal Pincode">
+        <button class="btn btn-primary" id="validate-pincode-btn" data-en="Check" data-kn="ಪರಿಶೀಲಿಸಿ">Check</button>
+      </div>
+      <div class="pincode-feedback" id="pincode-feedback"></div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
